@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox layout</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- a float-olás és az ebből adódó clearfix-es probléma kiküszöbölésére
+használjuk, illetve a függőleges középreigazítást is meg lehet
+oldani a flexbox-al, illetve a responzív oldalak megjelenésével szükségessé
+vált az elemek sorrendjének a felcserélését is (ezekre a float-olás nem volt támogatott
+vagy csak nagyon nehezen megoldató)
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+-->
+
+    <h1>Receptek</h1>
+
+    <div class="wrapper">
+      <!-- .content lesz a flex container,ebben lesznek a flex item-ek -->
+      <div class="content">
+        <nav>
+          <ul>
+            <li><a href="">Előételek</a></li>
+            <li><a href="">Főételek</a></li>
+            <li><a href="">Levesek</a></li>
+            <li><a href="">Desszertek</a></li>
+            <li><a href="">Saláták</a></li>
+            <li><a href="">Turmixok</a></li>
+            <li><a href="">Sütemények</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <div class="recipes">
+            <!-- ebben jelenítjük meg a recepteket -->
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja1.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja2.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja1.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja2.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja1.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+            <div class="recipe-box">
+              <!-- ez fogja egy receptnek a boxát megjeleníteni -->
+              <img src="./images/kaja2.jpg" alt="" />
+              <h2>Recept címe</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate officia expedita, id amet sed obcaecati. Rerum
+                molestiae maxime, quaerat tempora ipsum neque minus esse
+                deserunt incidunt, blanditiis, possimus labore beatae!
+              </p>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <span class="page">1</span>
+            <!-- azért tettem span-be mert ezt nem kell, hogy link legyen -->
+            <a href="" class="page">2</a>
+            <a href="" class="page">3</a>
+            <a href="" class="page">4</a>
+            <a href="" class="page">5</a>
+            <a href="" class="page">6</a>
+            <a href="" class="page">7</a>
+            <a href="" class="page">8</a>
+            <a href="" class="page">9</a>
+            <a href="" class="page">10</a>
+            <a href="" class="page">11</a>
+            <a href="" class="page">12</a>
+            <a href="" class="page">13</a>
+          </div>
+        </main>
+
+        <aside>
+          <ul>
+            <li>
+              <a href=""
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariatur</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariatur</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariatur</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariatur</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariaturl</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime vero libero voluptatibus pariatur</a
+              >
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

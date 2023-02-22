@@ -1,0 +1,51 @@
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.div1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+#max {
+  margin-top: 40px;
+}
+
+#vásárló {
+  margin-top: 40px;
+}
+
+input {
+  margin-top: 20%;
+  margin-left: 30%;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  border: red outset 3px;
+  font-size: 20px;
+}
+
+#belépőgomb {
+  margin-left: 35%;
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  border: blue outset 10px;
+}

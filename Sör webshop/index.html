@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Home Beer Webshop</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="hMenu">
+          <span class="menu-button">
+            <img src="./img/list.svg" alt="hmenu" />
+          </span>
+        </div>
+
+        <div class="logo">
+          <img src="./img/HomeBeerLogo.png" alt="Logo" />
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="#">Főoldal</a></li>
+          <li><a href="#">Szállítás és fizetés</a></li>
+          <li><a href="#">Legújabb termékek</a></li>
+          <li><a href="#">Kapcsolat</a></li>
+        </ul>
+
+        <div class="cart-area">
+          <span class="nav-icon">
+            <img src="./img/search.svg" alt="kereseslogo" /><span
+              class="cart-text"
+              >Keresés</span
+            ></span
+          >
+          <span class="nav-icon">
+            <img src="./img/cart-fill.svg" alt="bevásárlókocsiikon" /><span
+              class="cart-text"
+              >Kosár (0)</span
+            ></span
+          >
+        </div>
+      </nav>
+
+      <section class="banner">
+        <h1>Minden ami sör</h1>
+        <h2>Minőségi sörök széles választékban</h2>
+      </section>
+    </header>
+
+    <main>
+      <section id="welcome">
+        <article class="welcome-card products">
+          <h3>Termékeink</h3>
+          <button class="btn">Megnézem</button>
+        </article>
+        <article class="welcome-card brewing">
+          <h3>Főzés folyamata</h3>
+          <button class="btn">Megnézem</button>
+        </article>
+        <article class="welcome-card about">
+          <h3>Rólunk</h3>
+          <button class="btn">Megnézem</button>
+        </article>
+      </section>
+
+      <section id="action">
+        <h2>Akciós termékek</h2>
+
+        <section class="action-cards">
+          <article class="action-card">
+            <img src="./img/klassicmalata.png" alt="klasszikmalna" />
+            <h3>Klasszikus Maláta</h3>
+            <p class="price">600 Ft</p>
+          </article>
+          <article class="action-card">
+            <img src="./img/kekloalom.png" alt="kéklőálom" />
+            <h3>Kéklő Álom</h3>
+            <p class="price">700 Ft</p>
+          </article>
+          <article class="action-card">
+            <img src="./img/keklodobozos.png" alt="kéklődobozos" />
+            <h3>Kéklő Dobozos</h3>
+            <p class="price">550 Ft</p>
+          </article>
+          <article class="action-card">
+            <img src="./img/mergesmalnas.png" alt="mérgesmálnás" />
+            <h3>Mérges Málnás</h3>
+            <p class="price">700 Ft</p>
+          </article>
+        </section>
+      </section>
+
+      <section id="subscribe">
+        <article class="subscribe-card">
+          <h2>Felíratkozás a hírlevélre</h2>
+          <div class="input-area">
+            <form action="#" method="post">
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="Ön vezetékneve"
+              />
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Ön keresztneve"
+              />
+
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Ön email címe"
+              />
+              <label class="licence" for="check">
+                <input type="checkbox" name="check" id="check" />
+                Hozzájárulok ahhoz, hogy a Home Beer Kft. nevemet és az email
+                címemet hírlevelezési céllal kezelje és a részemre gazdasági
+                reklámot is tartalmazó emaileket küldjön.
+              </label>
+              <input class="btn" type="submit" value="Feliratkozás" />
+            </form>
+          </div>
+        </article>
+      </section>
+
+      <section id="tips">
+        <h2>Tippek és trükkök</h2>
+        <article class="tips-cards">
+          <article class="tips-card">
+            <img src="./img/hutes.png" alt="hutes" />
+            <div>
+              <h3>A hűtésről</h3>
+              <p class="date">2022.10.01.</p>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium possimus doloribus eveniet vitae cupiditate cumque
+                quae soluta, voluptas blanditiis sunt facere repudiandae ipsam
+                tempora commodi, sed ad fugiat omnis ducimus?
+              </p>
+            </div>
+            <button class="btn">Részletek</button>
+          </article>
+
+          <article class="tips-card big-card">
+            <img src="./img/fozo.png" alt="fozo" />
+            <div>
+              <h3>A főző</h3>
+              <p class="date">2022.10.02.</p>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium possimus doloribus eveniet vitae cupiditate cumque
+                quae soluta, voluptas blanditiis sunt facere repudiandae ipsam
+                tempora commodi, sed ad fugiat omnis ducimus?
+              </p>
+            </div>
+            <button class="btn">Részletek</button>
+          </article>
+          <article class="tips-card">
+            <img src="./img/sorkemia.png" alt="sorkemia" />
+            <div>
+              <h3>A sör kémia</h3>
+              <p class="date">2022.10.03.</p>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium possimus doloribus eveniet vitae cupiditate cumque
+                quae soluta, voluptas blanditiis sunt facere repudiandae ipsam
+                tempora commodi, sed ad fugiat omnis ducimus?
+              </p>
+            </div>
+            <button class="btn">Részletek</button>
+          </article>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-menu">
+        <ul class="footer-list">
+          <li>Sütik kezelése</li>
+          <li>Adatvédelmi irányelvek</li>
+          <li>Impresszum</li>
+          <li>Kapcsolat</li>
+          <li>vásárlási feltételek</li>
+        </ul>
+      </section>
+      <section class="soc-icon">
+        <ul>
+          <li>
+            <img class="fa-brands" src="./img/facebook.svg" alt="facebook" />
+          </li>
+          <li>
+            <img class="fa-brands" src="./img/twitter.svg" alt="twitter" />
+          </li>
+          <li>
+            <img class="fa-brands" src="./img/instagram.svg" alt="instagram" />
+          </li>
+          <li>
+            <img class="fa-brands" src="./img/youtube.svg" alt="youtube" />
+          </li>
+        </ul>
+      </section>
+      <p>Copyright 2022 Kun-Fagyal Zoltán</p>
+    </footer>
+  </body>
+</html>

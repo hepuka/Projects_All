@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS grid layout - példaoldal</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="grid">
+        <div class="logo">Napi hírek</div>
+        <nav>
+          <ul>
+            <li><a href="">Cikkek</a></li>
+            <li><a href="">Archívum</a></li>
+            <li><a href="">Dokumentumok</a></li>
+            <li><a href="">Impresszum</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="leading-articles">
+      <div class="grid">
+        <div class="section-title">Vezető hírek</div>
+
+        <div class="box-1">
+          <a class="article-image" href="#"
+            ><img src="./pics/1.jpg" alt=""
+          /></a>
+          <a class="article-category" href="#">BELFÖLD</a>
+          <a class="article-title" href="#"
+            >Phasellus consectetur, orci non dignissim venenatis, ligula metus
+            luctus lacus, a condimentum turpis lectus interdum ante</a
+          >
+          <p>
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. In porta elit pellentesque justo
+            sollicitudin, non blandit lectus elementum.
+          </p>
+        </div>
+
+        <div class="box-2">
+          <a class="article-image" href="#"><img src="pics/2.jpg" alt="" /></a>
+          <a class="article-category" href="#">KÜLFÖLD</a>
+          <a class="article-title" href="#"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+          >
+        </div>
+        <div class="box-3">
+          <a class="article-image" href="#"><img src="pics/3.jpg" alt="" /></a>
+          <a class="article-category" href="#">BELFÖLD</a>
+          <a class="article-title" href="#"
+            >Vivamus porttitor, ipsum ac rhoncus feugiat, magna augue</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-articles">
+      <div class="grid">
+        <div class="section-title">Kiemelt hírek</div>
+        <div class="box">
+          <a class="article-image" href="#"><img src="pics/4.jpg" alt="" /></a>
+          <a class="article-category" href="#">GAZDASÁG</a>
+          <a class="article-title" href="#"
+            >Etiam suscipit rhoncus erat egestas cursus rhoncus erat egestas
+            cursus</a
+          >
+          <p>
+            Donec ultricies finibus risus, a bibendum libero consequat. Nullam
+            at augue ante. Etiam dolor velit, vehicula at volutpat non,
+            convallis eget sapien. Aliquam vel neque massa. Morbi in ligula quis
+            dui convallis euismod. Suspendisse potenti.
+          </p>
+        </div>
+        <div class="box">
+          <a class="article-image" href="#"><img src="pics/5.jpg" alt="" /></a>
+          <a class="article-category" href="#">SPORT</a>
+          <a class="article-title" href="#"
+            >Duis non magna mattis, mattis mi vitae, tempor felis</a
+          >
+          <p>
+            Quisque posuere convallis felis, at imperdiet ex porta ut. Integer
+            ut orci condimentum, tempus eros in, tempor nunc. Aliquam vel neque
+            massa. Morbi in ligula quis dui convallis euismod. Suspendisse
+            potenti. Duis quis urna felis.
+          </p>
+        </div>
+        <div class="box">
+          <a class="article-image" href="#"><img src="pics/6.jpg" alt="" /></a>
+          <a class="article-category" href="#">UTAZÁS</a>
+          <a class="article-title" href="#"
+            >Nulla bibendum sapien at convallis accumsan</a
+          >
+          <p>
+            Phasellus imperdiet tempor neque, a auctor leo consectetur vitae.
+            Suspendisse malesuada diam lacus. Pellentesque mollis sit amet diam
+            vel facilisis. In blandit leo turpis, quis sodales odio egestas ut.
+            Pellentesque lacinia finibus pulvinar.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="short-articles">
+      <div class="grid">
+        <div class="section-title">Hírek röviden</div>
+        <div class="box">
+          <a class="article-category" href="#">SPORT</a>
+          <a class="article-title" href="#"
+            >Quisque tristique ligula quis pharetra auctor</a
+          >
+
+          <a class="article-category" href="#">BELFÖLD</a>
+          <a class="article-title" href="#"
+            >Nunc efficitur ipsum nec libero maximus blandit</a
+          >
+
+          <a class="article-category" href="#">UTAZÁS</a>
+          <a class="article-title" href="#"
+            >Vestibulum dolor purus, tincidunt vel ex ac, tempus tempus nulla</a
+          >
+
+          <a class="article-category" href="#">SZÓRAKOZÁS</a>
+          <a class="article-title" href="#"
+            >Proin pharetra molestie ante, et imperdiet lorem eleifend eu</a
+          >
+        </div>
+        <div class="box">
+          <a class="article-category" href="#">GASZTRO</a>
+          <a class="article-title" href="#">Nullam non consequat justo</a>
+
+          <a class="article-category" href="#">IDŐJÁRÁS</a>
+          <a class="article-title" href="#"
+            >Vestibulum pretium pharetra diam tincidunt pellentesque</a
+          >
+
+          <a class="article-category" href="#">SPORT</a>
+          <a class="article-title" href="#"
+            >Aenean augue ligula, cursus sed sem at, consequat eleifend magna</a
+          >
+
+          <a class="article-category" href="#">KÜLFÖLD</a>
+          <a class="article-title" href="#"
+            >Quisque tristique ligula quis pharetra auctor</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="grid">
+        <div class="box">
+          <ul>
+            <li>Column #1</li>
+            <li><a href="">Aenean augue ligula</a></li>
+            <li><a href="">consequat eleifend magna</a></li>
+            <li><a href="">Proin pharetra molestie ante</a></li>
+            <li><a href="">Quisque tristique ligula quis</a></li>
+            <li><a href="">Phasellus imperdiet tempor neque</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <ul>
+            <li>Column #2</li>
+            <li><a href="">Aenean augue ligula</a></li>
+            <li><a href="">consequat eleifend magna</a></li>
+            <li><a href="">Proin pharetra molestie ante</a></li>
+            <li><a href="">Quisque tristique ligula quis</a></li>
+            <li><a href="">Phasellus imperdiet tempor neque</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <ul>
+            <li>Column #3</li>
+            <li><a href="">Aenean augue ligula</a></li>
+            <li><a href="">consequat eleifend magna</a></li>
+            <li><a href="">Proin pharetra molestie ante</a></li>
+            <li><a href="">Quisque tristique ligula quis</a></li>
+            <li><a href="">Phasellus imperdiet tempor neque</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

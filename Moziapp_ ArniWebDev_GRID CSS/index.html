@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mozi App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="movie-details-container">
+        <div class="select-container">
+          <label for="movie">Válassz egy filmet:</label>
+          <select id="movie"></select>
+        </div>
+
+        <ul class="legend-container">
+          <li>
+            <div class="available-seat"></div>
+            <span>Elérhető</span>
+          </li>
+          <li>
+            <div class="available-seat selected"></div>
+            <span>Kiválasztott</span>
+          </li>
+          <li>
+            <div class="available-seat occupied"></div>
+            <span>Lefoglalt</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cinema-container">
+        <div class="canvas"></div>
+        <div class="seats"></div>
+      </div>
+
+      <div class="price-reset-container">
+        <p>
+          <span id="counter">0</span> helyet foglaltál le, VÉGÖSSZEG:
+          <span id="price">0</span> HUF
+        </p>
+        <div class="reset">Foglalás törlése</div>
+        <div class="reset occupied_submit">Foglalás leadása</div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js" type="module"></script>
+  </body>
+</html>

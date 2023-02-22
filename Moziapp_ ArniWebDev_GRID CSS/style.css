@@ -1,0 +1,172 @@
+:root {
+  --background: #34495e;
+  --available: #35ac49;
+  --selected: #f58220;
+  --occupied: #737374;
+  --price: #6feaf6;
+  --white: white;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrapper {
+  /* a képernyő teljes magasságát elfoglalja a div */
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+
+  /* 
+  - 7 sort hozunk létre ami egyenként 1fr magasságú
+  - a hét sort úgy állítjuk be, hogy a felső és az alsó sort auto-ra állítjuk, hogy annyival csökkentjen vagy növekedjen amennyi hely van. A maradék 5 sort fixen 116px magasságúra állítom
+  
+  */
+  grid-template-rows: auto repeat(5, 116px) auto;
+  justify-items: center;
+
+  /*Beállítom a sorok neveit, . kell használni ha a sort nem használjuk*/
+  grid-template-areas:
+    "." /*ebbe a sorba nem rakunk semmit*/
+    "details" /*ide jön a detils iv*/
+    "cinema" /*eezek a sorok kellenek a cinem div-nek*/
+    "cinema"
+    "cinema"
+    "reset" /*ide jön areset gomb*/
+    "."; /*ebbe a sorba nem rakunk semmit*/
+}
+
+/*a div.eket hozzárendelem a sorokhoz*/
+.movie-details-container {
+  grid-area: details;
+  align-self: end; /*a div aljára helyezi el a tartalmat*/
+}
+
+.select-container {
+  text-align: center;
+}
+
+select {
+  width: 210px;
+  height: 30px;
+  background-color: var(--white);
+  color: var(--background);
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 4px;
+  -webkit-appearance: none; /*eltűnteti a nyilat a legördülő menüből*/
+  text-align-last: center; /*chrome miatt kell a -last*/
+}
+
+.legend-container {
+  height: 40px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0 20px;
+}
+
+.legend-container li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legend-container li span {
+  margin: 4px;
+}
+
+/*a div.eket hozzárendelem a sorokhoz*/
+.cinema-container {
+  grid-area: cinema;
+}
+
+.canvas {
+  background-color: var(--white);
+  height: 110px;
+  width: 280px;
+  margin-top: 30px;
+  transform: perspective(800px) rotatex(-35deg); /*mozivászon kialakítása*/
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.seats {
+  display: grid;
+  /*ülések elhelyezése*/
+  grid-template-columns: repeat(2, 30px) 50px repeat(3, 30px) 50px 30px;
+  margin: 10px auto 0 auto;
+}
+
+.available-seat {
+  background-color: var(--available);
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  justify-self: end;
+}
+
+.available-seat.selected {
+  background-color: var(--selected);
+}
+
+.available-seat.occupied {
+  background-color: var(--occupied);
+}
+
+.seats .available-seat:hover {
+  cursor: pointer;
+  transform: scale(1.2); /*megnő a doboz a kocka mérete ha ráviszem az egeret*/
+}
+
+/*beállítom, hogy a lefoglalt kockáknál ne legyen pointer és kockaméret növekedés*/
+.seats .available-seat.occupied:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+/*a div.eket hozzárendelem a sorokhoz*/
+.price-reset-container {
+  grid-area: reset;
+}
+
+.price-reset-container .reset {
+  width: 150px;
+  line-height: 30px;
+  background-color: var(--white);
+  color: var(--background);
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 25px auto 0 auto;
+}
+
+.price-reset-container .reset:hover {
+  background-color: red;
+  cursor: pointer;
+  transform: scale(1.1);
+  color: var(--white);
+}
+
+.price-reset-container p {
+  margin-top: 20px;
+}
+
+.price-reset-container span {
+  color: var(--price);
+}

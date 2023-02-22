@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>10. Media query</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="icon" type="image/png" href="pics/favicon.png" />
+  </head>
+  <body>
+    <nav>
+      <!--
+	a mobilos navigációt kapcsolgató csekbox
+	a csekboxot eltüntetjük
+	a három <span> tag a hamburger ikont fogja megvalósítani
+	-->
+      <label for="mobile-menu" class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <input type="checkbox" id="mobile-menu" />
+
+      <!--
+	a navigáció elemei, melyből az első <li> kivételével
+	mindent eltüntetünk mobilnézetben
+	-->
+      <ul class="navigation">
+        <li>Fruits</li>
+        <!-- nem linkel sehova -->
+        <li><a href="">Alma</a></li>
+        <li><a href="">Banán</a></li>
+        <li><a href="">Körte</a></li>
+        <li><a href="">Szilva</a></li>
+        <li><a href="">Áfonya</a></li>
+        <li><a href="">Citrom</a></li>
+        <li><a href="">Narancs</a></li>
+        <li><a href="">Ananász</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <!-- középre igzazítja az oldalt a böngészőben -->
+      <div class="intro">
+        <h1>Fruits</h1>
+        <img src="pics/intro.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          blandit purus eu interdum malesuada. Phasellus quis vehicula elit, nec
+          vestibulum tellus. Integer at pharetra lorem. Suspendisse aliquam sit
+          amet neque non condimentum. Curabitur lacinia mauris nec pharetra
+          vulputate. Aenean non lectus orci. Mauris pellentesque pulvinar
+          bibendum. Nulla molestie lacinia lectus. Sed varius ligula ac
+          pellentesque volutpat.
+        </p>
+        <p>
+          Phasellus sem libero, luctus et elit in, sollicitudin cursus lacus.
+          Sed pretium nisi ante, in consectetur velit rhoncus consequat. Nam
+          ornare justo mauris, at aliquet metus facilisis a. Maecenas id aliquam
+          magna. Fusce et gravida urna. Cras bibendum massa nulla, in fermentum
+          tellus rhoncus id. Ut faucibus, neque nec fringilla molestie, nulla
+          dui aliquam ligula, ut rhoncus felis massa a ipsum.
+        </p>
+        <p>
+          Donec tincidunt mauris elementum risus rhoncus, eu sollicitudin elit
+          ullamcorper. Nam ut orci at nibh rutrum volutpat at et elit.
+          Suspendisse ultrices convallis congue. Quisque finibus porttitor
+          lacinia. Nam dapibus, massa eu varius condimentum, magna turpis
+          vestibulum arcu, at malesuada felis justo vitae felis. Nam blandit
+          posuere ante sed condimentum. Curabitur vestibulum, orci sit amet
+          pellentesque molestie, nisi erat sollicitudin metus, a aliquam ipsum
+          urna interdum orci.
+        </p>
+      </div>
+
+      <h2>Fruit boxes</h2>
+
+      <!--
+	a .box-wrapper egy flexbox konténer
+	-->
+      <div class="box-wrapper">
+        <!--
+		a .box-ok pedig flexbox item-ek
+		-->
+        <div class="box">
+          <img src="pics/image1.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pics/image2.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pics/image3.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pics/image4.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pics/image5.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="pics/image6.jpg" alt="" />
+          <div class="box-content">
+            <h3>Fruits...</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              convallis velit.
+            </p>
+            <a class="btn" href="">részletek</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

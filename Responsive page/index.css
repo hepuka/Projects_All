@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap');
+
+
+/*pszeudo class és pszeudo elements:
+
+https://www.w3schools.com/css/css_pseudo_elements.asp
+
+*/
+
+* {
+	box-sizing: border-box
+}
+html {
+	font-size: 16px
+}
+body {
+	background: #ddd;
+	font-family: 'Roboto';
+	margin: 0
+}
+img {
+	max-width: 100% /*ezzel a box-okban lévő képek egymás mellé kerülnek*/
+}
+
+/*
+1rem = a html elemen megadott betűméret
+ha nincs megadva, akkor általában 16px az alapértelmezett értéke
+a CSS mértékegységekről itt olvashatsz bővebben:
+https://cyrex.hu/2017/11/09/css-mertekegysegek/
+*/
+h2 {
+	font-size: 3rem;
+	font-weight: 300
+}
+
+/*
+görgetéskor a fejléc feltapad
+a position: sticky csak akkor működik, ha a top érték be van állítva
+dokumentáció:
+https://www.w3schools.com/css/css_positioning.asp
+*/
+nav {
+	background: #86b604;
+	position: sticky;
+	top: 0
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+nav ul li {
+	float: left; /*ezzel kerülnek egymás mellé a menüpontok*/
+}
+
+nav::after { /*a nav ul li  float miatt kell a clearfix */
+	content:'';
+	clear: both;
+	display: table
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 1.2rem 1rem
+}
+
+nav a:hover {
+	background: rgba(0,0,0,.1)
+}
+/*
+.navigation-ön belüli első <li> kiszelektálása
+*/
+.navigation li:first-child { /* <li>Fruits</li>    -    erre vonatkozik*/
+	padding: 1.2rem 1rem;
+	color: rgba(255,255,255,.5)
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 95%
+}
+.intro {
+	line-height: 1.7;
+	font-size: 1.2rem;
+	margin: 5rem 0
+}
+.intro p {
+	margin: 0 0 1rem 0;
+	text-align: justify;
+}
+.intro img {
+	float: right;
+	margin: 0 0 2rem 2rem;
+	border-radius: 50%
+}
+.intro h1 {
+	font-weight: 100;
+	font-size: 5rem;
+	margin: 0 0 2rem 0
+}
+
+/*
+ha a kijelző mérete legfeljebb 800px széles, ha ettől kisebb akkor lép életbe ez a media query beállítás
+
+https://www.w3schools.com/css/css3_mediaqueries.asp
+
+*/
+@media(max-width:800px) {
+	.intro {
+		margin: 2rem 0
+	}
+	.intro img {
+		max-width: 200px
+	}
+}
+
+/*
+ha a kijelző mérete legfeljebb 480px széles
+*/
+@media(max-width:480px) {
+	.intro img {
+		float: none;
+		margin: 1rem auto;
+		display: block
+	}
+}
+
+
+.box-wrapper {
+	display: flex;
+	flex-flow: row wrap; /* törje meg a sort, és nem tolja szét a layout-ot.*/
+	margin: 0 -10px
+}
+
+.box {
+	flex: 1; /*Így lesznek egymás mellett és alatt a boxok, ehhez a box-wrapper beállítása is szükséges*/
+	margin: 10px;
+	min-width: 300px; /*ezzel adjuk meg a dobozok méretét, enélkül többb doboz is egymás mellett lenne a sorban (kis dobozok lennének)*/
+	background: white;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1)
+}
+.box-content {
+	padding: 1.5rem;
+	font-size: .9rem
+}
+.box h3 {
+	margin: 0;
+	font-size: 1.2rem
+}
+.btn {
+	display: inline-block;
+	padding: .5rem 1rem;
+	background: #86b604;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.mobile-menu-button {
+	width: 50px;
+	display: block;
+	float: right;
+	border: 1px solid rgba(255,255,255,.2);
+	padding: 10px;
+	margin: 7px 5px 0 0;
+	display: none
+}
+.mobile-menu-button span {
+	display: block;
+	height: 4px;
+	background: white;
+	margin: 0 0 5px 0;
+	border-radius: 2px
+}
+/*
+az utolsó <span> típusú elem kiszelektálása a .mobile-menu-button class-on belül
+*/
+.mobile-menu-button span:last-of-type {
+	margin: 0
+}
+
+/*
+a .mobile-menu-button után található checkbox típusú input kiszelektálása
+*/
+.mobile-menu-button + input[type="checkbox"] {
+	display: none
+}
+
+/*
+a .mobile-menu-button után található checkbox típusú input kiszelektálása,
+és, ha ez be van jelölve (checked), akkor a .navigation-ön belül összes <li>-t
+eltüntetjük, kivéve az elsőt
+*/
+.mobile-menu-button + input[type="checkbox"]:checked ~ .navigation li:not(:first-child) {
+	display: block
+}
+
+
+
+/*
+ha a kijelző mérete legfeljebb 800px széles
+*/
+@media(max-width:800px) {
+	.mobile-menu-button {
+		display: block
+	}
+	.navigation li:not(:first-child) { /*fruit szó megmarad a nav elején*/
+		display: none
+	}
+	.navigation li {
+		float: none; /*hamburger menüben egymás alá kerülnek*/
+		border-top: 1px solid rgba(255,255,255,.2)
+	}
+	.navigation a {
+		padding: .8rem 1rem
+	}
+}
+
+
+/*
+nyomtatási nézetre vonatkozó CSS beállítások
+*/
+@media print {
+	nav {
+		display: none
+	}
+	.intro {
+		margin-top: 0
+	}
+	.intro h1 {
+		line-height: 1
+	}
+	.intro img {
+		display: none
+	}
+}
