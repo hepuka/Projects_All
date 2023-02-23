@@ -1,216 +1,190 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-
-    margin: 0;
-    font-family: georgia;
-	background-color: #ddd;
-
+body {
+  margin: 0;
+  font-family: georgia;
+  background-color: #ddd;
 }
 
-h1{
-
-    font-family: 'Lobster';
-    font-weight: 400;
-    text-align: center;
-    font-size: 70px;
-    border-top: 2px dashed rgba(0,0,0,.2);
-    border-bottom: 2px dashed rgba(0,0,0,.2);
-    padding: 20px 0; /* alul-felül 20px jobb-bal oldal 0 */
-    margin: 40px 40px;
-    background-color: #ddd;
-    color: green;
+h1 {
+  font-family: "Lobster";
+  font-weight: 400;
+  text-align: center;
+  font-size: 70px;
+  border-top: 2px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  margin: 40px 0 40px 40px;
+  background-color: #ddd;
+  color: green;
 }
 
-img{
-
-/*
+img {
+  /*
 a képek reszponzív működéséhez kell
 */
-    max-width: 100%;
-
+  max-width: 100%;
 }
 
-.wrapper{
-        /*
-        - az oldal alapszélességét állítom be*/
-    max-width: 1200px;
-    margin: 0 auto; /* ezzel állítom középre a 3 hasábot */
+.wrapper {
+  /*
+    - az oldal alapszélességét állítom be*/
+  max-width: 1200px;
+  margin: 0 auto; /* ezzel állítom középre a 3 hasábot */
 }
 
-
-.content{
-    /* 
+.content {
+  /* 
     - .content lesz a flex container,ebben lesznek a flex item-ek.
     - .content közvetlen gyermekei lesznek automatikusan a flex item-ek (nav,main,aside)*/
-    display: flex;
+  display: flex;
 
-    /*
+  /*
     flex-direction: row; a forráskódban lévő sorrendben helyezkednek el a flex-itemek 
                             egymás mellett egy sorban
     flex-wrap: nowrap; a flex item-ek nem törnek meg, a wrap-el megtöri, 
                         ha az item már nem fér ki a sorba 
     */
-    
-    flex-flow:row nowrap; /*ez a flex-direction és a flex-wrap shorthand megadása*/
 
-    justify-content:center; /* ez adja meg, hogy a flex container hogyan ossza el a flex item-eket
-                                a konténeren belül*/
+  flex-flow: row nowrap; /*ez a flex-direction és a flex-wrap shorthand megadása*/
 
-    align-items:stretch; /* 
+  justify-content: center; /* ez adja meg, hogy a flex container hogyan ossza el a flex item-eket a konténeren belül*/
+
+  align-items: stretch; /* 
                         - a flex-item-ek függőleges igazítását adja meg.
-                        - stretch esetében a flex container magasságához fog igazodni az összes
-                        flex item*/
+                        - stretch esetében a flex container magasságához fog igazodni az összes flex item*/
 
-   /* align-content  ha több sorba törik a tartalom a flex container-en belül, akkor ezeket
-                        a sorokat, hogyan ossza el a konténeren belül*/
-    
+  /* align-content  ha több sorba törik a tartalom a flex container-en belül, akkor ezeket a sorokat, hogyan ossza el a konténeren belül*/
 }
 
-nav{
+/************NAV*************/
 
-    background-color: #ddd;
-    flex-basis: 20vw; /* 
-                - viewport width: az aktuális viewport szélességének a
-                     20 százaléka lesz a nav szélessége 
-                     - responzív oldalak esetén mindig relatív mértékegységet kell használni, 
-                     hogy egyetlen elemnek se legyen fix szélessége*
-                - flex basis ugyanaz mint a width*/
+nav {
+  background-color: #ddd;
+  flex-basis: 20vw;
+  /* - viewport width: az aktuális viewport szélességének a 20 százaléka lesz a nav szélessége 
+    - responzív oldalak esetén mindig relatív mértékegységet kell használni, hogy egyetlen elemnek se legyen fix szélessége*
+    - flex basis ugyanaz mint a width*/
 }
 
-nav ul{
-
-    margin: 0;
-    list-style: none; /* kiveszi a pontot (felsorolás jelet) a link elöl */
-    padding: 30px 10px 10px 10px;
+nav ul {
+  margin: 0;
+  list-style: none; /* kiveszi a pontot (felsorolás jelet) a link elöl */
+  padding: 3px 10px 0px 25px;
 }
 
 nav li {
-
-    border-bottom: 1px dashed rgba(255, 255, 255,.3);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
 }
 
 nav a {
-
-    text-decoration: none; /* kiveszi az aláhúzást a link alól */
-    color: black;
-    padding: 15px;
-    display: block; /* azért, hogy a padding működjön rá kell rakni a display:block-ot is,
-                    mert az a tag inline elem*/
+  text-decoration: none; /* kiveszi az aláhúzást a link alól */
+  color: black;
+  padding: 5px;
+  margin: 10px;
+  display: block; /* azért, hogy a padding működjön rá kell rakni a display:block-ot is,mert az a tag inline elem*/
 }
 
-nav a:hover{
-
-    background-color: rgba(78, 59, 59, 0.2);
+nav a:hover {
+  border-bottom: 1px solid grey;
+  width: 50%;
 }
 
-main{
+/************MAIN*************/
 
-    flex-basis: 60vw;
-    margin: 0 20px;
+main {
+  flex-basis: 60vw;
+  margin: 0 20px;
 }
 
-aside{
-
-    flex-basis: 20vw;
-    
+/*mivel a recipe-box-okat egymás mellé szeretnénk rakni, így az őt tároló recipes div-et is display:flex-re kell állítani*/
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
 }
 
-aside ul{
-    list-style: none;
-    margin: 0;
-    padding:0;
+.recipe-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 0 0 10px 0;
+  margin: 0 10px 20px 10px;
 
+  /*flex item beállításához használatos flex alapértelmezett értéke 1, ez egy teljes
+    automatikus megadást jelent, ehhez kell még megadni az egyes box-ok minimális szélességét. Ennek függvényében 2 box fér egymás mellé, ha csökkentjük a min értéket akkor több is.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+    */
+  flex: 1;
+  min-width: 250px;
 }
 
-aside li{
-    padding: 15px 0;
-    border-bottom: 1px dashed rgba(0, 0, 0, .4);
+.recipe-box h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 10px 20px 0 20px;
 }
 
-aside a{
-
-    display: block; /*mindig kell ha ul-ben vannak a tag-ek*/
-    color: black;
-    font-size: 14px;
-    text-decoration: none;
-    line-height: 22px;
-
-
+.recipe-box p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 0;
+  padding: 10px 20px;
+  line-height: 19px;
 }
 
-aside a:hover{
-
-    text-decoration: underline;
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 30px 0;
 }
 
-
-/*mivel a recipe-box-okat egymás mellé szeretnénk rakni, így az őt tároló recipes div-et is
-        display:flex-re kell állítani*/
-.recipes{
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
+.pagination .page {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 5px 8px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #354052;
 }
 
-.recipe-box{
-
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 0 0 10px 0;
-    margin: 0 10px 20px 10px;
-
-    /*flex item beállításához használatos flex alapértelmezett értéke 1, ez egy teljes
-    automatikus megadást jelent, ehhez kell még megadni az egyes box-ok minimális szélességét.
-    Ennek függvényében 2 box fér egymás mellé, ha csökkentjük a min értéket akkor több is.*/
-    flex: 1;
-    min-width: 250px;
-
-
+.pagination .page:hover,
+.pagination span.page {
+  background-color: black;
+  color: white;
 }
 
-.recipe-box h2{
-    font-size: 18px;
-    margin: 0;
-    padding: 10px 20px 0 20px;
+/************ASIDE*************/
+
+aside {
+  flex-basis: 20vw;
 }
 
-.recipe-box p{
-    font-size: 14px;
-    text-align: justify;
-    margin: 0;
-    padding: 10px 20px;
-    line-height: 19px;
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.pagination{
-
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    margin: 30px 0;
+aside li {
+  padding: 15px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
 }
 
-.pagination .page{
-
-    display: inline-block;
-    margin: 0 5px 5px 0;
-    padding: 5px 8px;
-    text-decoration: none;
-    background-color: white;
-    border: 1px solid rgba(0,0,0,.2);
-    color: #354052;
-    
+aside a {
+  display: block; /*mindig kell ha ul-ben vannak a tag-ek*/
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 22px;
+  text-align: justify;
 }
 
-.pagination .page:hover, .pagination span.page{
-
-    background-color: black;
-    color: white;
+aside a:hover {
+  text-decoration: underline;
 }
