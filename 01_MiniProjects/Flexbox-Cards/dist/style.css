@@ -3,7 +3,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -18,7 +20,7 @@ body {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
   gap: 1.5rem;
   padding: 3rem;
@@ -66,4 +68,4 @@ body {
   margin-top: auto;
   text-transform: uppercase;
   font-weight: 700;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
