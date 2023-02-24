@@ -1,0 +1,857 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Debreceni Hírmondó</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kun Zoltán" />
+  </head>
+  <body>
+    <div class="focim">
+      <h1>
+        DEBRECENI HÍRMONDÓ | <small>Debrecen hírei első kézből</small>
+        <span style="float: right">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="fa fa-facebook"
+          ></a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="fa fa-twitter"
+          ></a>
+          <a
+            href="https://www.google.com"
+            target="_blank"
+            class="fa fa-google"
+          ></a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            class="fa fa-youtube"
+          ></a>
+        </span>
+      </h1>
+    </div>
+
+    <div class="header">
+      <form method="POST" action="login.php" class="container">
+        <h2>Regisztráció</h2>
+
+        <input type="text" placeholder="Felhasználónév" name="uname" required />
+
+        <input type="password" placeholder="Jelszó" name="psw" required />
+
+        <button id="belép" type="submit" class="btn">Belép</button>
+      </form>
+    </div>
+
+    <div class="tab">
+      <button
+        class="tablinks"
+        onclick="openLink(event, 'Címlap')"
+        id="defaultOpen"
+      >
+        CÍMLAP
+      </button>
+      <button class="tablinks" onclick="openLink(event, 'Debrecen')">
+        DEBRECEN
+      </button>
+      <button class="tablinks" onclick="openLink(event, 'Gazdaság')">
+        GAZDASÁG
+      </button>
+      <button class="tablinks" onclick="openLink(event, 'Tech')">TECH</button>
+      <button class="tablinks" onclick="openLink(event, 'Bulvár')">
+        BULVÁR
+      </button>
+      <button class="tablinks" onclick="openLink(event, 'Kultúra')">
+        KULTÚRA
+      </button>
+      <button class="tablinks" onclick="openLink(event, 'Sport')">SPORT</button>
+    </div>
+
+    <div id="Címlap" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Lerakták az alapkövet: elkezdődött a Debreceni Egyetem
+          teniszközpontjának építése
+        </h3>
+
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Címlap - Az oktatást és sportolást is szolgáló központban négy
+          szabványos méretű, kemény borítású teniszpályát alakítanak ki.
+        </h5>
+        <img
+          src="segedanyagok/cimlap1.jpg"
+          alt="cimlap1"
+          style="
+            float: right;
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+        <p style="margin-left: 4px; margin-right: 4px; margin-top: 4px">
+          Sportgazdasági-menedzsment és Teniszközpontot hoz létre a Debreceni
+          Egyetem a Böszörményi úti campusán. Az épületnek csütörtökön rakták le
+          az alapkövét. Az épület két fő épületrészből áll majd össze. Az első,
+          fejépületi szekcióban három szinten oktatási (tantermek, irodák) és
+          kiszolgáló helyiségek (öltöző, nézőtér, büfé) találhatók majd, a
+          második szekcióban, magában a teniszcsarnokban pedig négy szabványos
+          méretű, kemény borítású teniszpályát alakítanak ki.
+        </p>
+        <p style="margin-left: 4px; margin-right: 4px">
+          A központ egyfelől oktatási célokat szolgál majd, mind elméleti, mind
+          pedig a teniszoktatás szempontjából gyakorlati síkon is, másfelől
+          pedig ezen központi létesítmény helyet ad a sportágat űző sportolók
+          számára gyakorláshoz és versenyzéshez is. A csarnok mobil pályák
+          használatával alkalmas lesz tollaslabdázásra is.
+          <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Milyen lehetőségeket látnak Debrecenben a nemzetközi
+          ingatlanbefektetők?
+        </h3>
+
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Címlap – Egymást váltották a tárgyalópartnerek Debrecen standjánál
+          Európa legnagyobb ingatlan- és beruházási szakvásárán. Négy téma tért
+          vissza folyamatosan a beszélgetések során.
+        </h5>
+        <img
+          src="segedanyagok/cimlap2.jpg"
+          alt="cimlap2"
+          style="
+            float: left;
+            width: 300px;
+            height: 170px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+        <p style="margin-left: 4px; margin-right: 4px">
+          Debrecen is bemutatkozott Európa legnagyobb ingatlan- és beruházási
+          szakvásárán október 8-a és 10-e között. A város képviselői Budapest,
+          Szeged és Pécs mellett mutatták be a befektetési lehetőségeket. A
+          müncheni Expo Real 1998 óta mára Európa legnagyobb ingatlanfejlesztési
+          kiállításává nőtte ki magát. Idén 64 ezer négyzetméteren 75 ország
+          ingatlanfejlesztési, beruházási lehetőségei mutatkoztak be. Köztük az
+          egyik legkeresettebb ország épp Magyarország volt, köszönhetően annak,
+          hogy 2010 óta a magyar ingatlanbefektetési forgalom nőtt a leginkább a
+          régióban.
+        </p>
+        <p style="margin-left: 4px; margin-right: 4px">
+          A debreceni delegáció tagja volt Póser Zoltán. Az EDC Debrecen Város-
+          és Gazdaságfejlesztési Központ ügyvezetője a tapasztalatokról beszélt
+          a Debrecen Televízió Esti Közelkép című műsorában.<i
+            >(Forrás:dehir.hu)</i
+          >
+        </p>
+      </div>
+    </div>
+
+    <div id="Debrecen" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Módosítják a szerződést, jöhetnek az új Mercedes-buszok Debrecenbe
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Debrecen - Elfogadta a közgyűlés a konzorciumi szerződés módosításáról
+          szóló javaslatot, így az új feltételeknek megfelelően bővíti
+          járműparkját a DKV.
+        </h5>
+        <p style="margin-left: 4px; margin-right: 4px">
+          A városban elsőként legyártott Mercedes-autóbusz mellé a DKV tervei
+          szerint további öt fog érkezni hamarosan. A DKV ugyanis kezdeményezte,
+          hogy öt csuklós Mercedes Conecto G típusú alacsony belépésű busszal
+          bővüljön még a járműpark, ilyen buszok közlekednek Budapesten 2015
+          óta. A járműállomány változása miatt módosítani kellett a debreceni
+          önkormányzat és a CÍVISBUSZ Konzorcium között korábban létrejött
+          közszolgáltatási szerződést. Erről is döntött csütörtöki ülésén a
+          városi képviselő-testület.
+        </p>
+        <img
+          src="segedanyagok/mercedes1.jpg"
+          style="width: 100%; border-radius: 7px"
+        />
+        <p style="margin-left: 4px; margin-right: 4px">
+          Varga Zoltán, a DK képviselője szerint nem derül ki az
+          előterjesztésből, hogy milyen bérleti díjjal futnak majd a buszok.
+          Értelmezése szerint a járművekben nem lesznek mozgáskorlátozott
+          rámpák, így ezek a buszok nem felelnek meg az eredeti közszolgáltatási
+          szerződésnek. Afelől érdeklődött a képviselő, hogy miért nem azokat a
+          Volvo buszokat hozzák vissza, amiket elvittek Debrecenből, továbbá
+          jelent-e bármilyen plusz kötelezettséget a városnak az új buszok
+          beállítása? A kérdésfelvetésre Nagy Attila, a DKV Zrt. vezérigazgatója
+          úgy reagált, mindenképpen mozgáskorlátozott rámpával szerelik fel a
+          járműveket, s nem Euro 4-es, hanem 6-os szabványúak lesznek a buszok.
+          Bérleti díjat, 332 forintos kilométerdíjat fizet majd értük a város,
+          ami a budapesti tarifához képest igencsak kedvező, ott ugyanis ez a
+          díj 800 forint felett van.<i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Irreális összegbe kerülne a Zsuzsi vasút pályájának meghosszabbítása a
+          Nagyállomásig
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Debrecen - Így ezt a lehetőséget elvetették. A pálya még nem
+          megújított részét, illetve a járműállományt jövő év végéig
+          korszerűsítenék.
+        </h5>
+
+        <img
+          src="segedanyagok/zsuzsi.jpg"
+          alt="zsuzsi"
+          style="
+            float: right;
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+
+        <p style="margin-left: 4px; margin-right: 4px">
+          A Zsuzsi vonat 17 kilométeres pályájából korábban 10 kilométernyit
+          újítottak fel, most jöhet a hátralévő hét kilométernyi pálya
+          modernizálása. Révész Máriusz kerékpározásért és aktív
+          kikapcsolódásért felelős kormánybiztos egy éve azt mondta, a debreceni
+          Zsuzsi Erdei Vasút pályájának felújítására 486 millió forintot, a
+          járműállomány modernizálására 268 millió forintot szánnak. Ebből a
+          pénzből kellett volna megtervezni a pálya nagyállomási bekötését is.
+        </p>
+        <p style="margin-left: 4px; margin-right: 4px">
+          A DKV és az üzemeltető cég most azt kezdeményezte, hogy a vasútvonal
+          Nagyállomásra bekötésére vonatkozó megvalósíthatósági tanulmány
+          készítése kerüljön ki a fejlesztésből, és a beruházás határidejét a
+          jövő év végéig hosszabbítsák meg. Ez eddig kiírt közbeszerzési
+          felhívásokra ugyanis csak olyan ajánlatok érkeztek, melyek meghaladták
+          a rendelkezésre álló forrást. A legújabb közbeszerzés még folyamatban
+          van, de még ha eredményes is lesz, akkor sem tudják befejezni a
+          felújítást az eredeti határidőre, 2018. december 31-ére.
+          <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+    </div>
+
+    <div id="Gazdaság" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          A béremelés önmagában nem elég a dolgozók megtartásához, hangzott el
+          Debrecenben
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Gazdaság - A munkaerőhiány komoly gondot okoz a vállalatoknak. Csak a
+          béremelés sok esetben már nem elég ahhoz, hogy megtartsák dolgozóikat.
+          Erről is szó volt az Innovatív HR - Kihívások a 21. században címmel
+          rendezett szakmai fórumon. A Debreceni Egyetemen ma tapasztalatcserére
+          és a jó gyakorlatok bemutatására is lehetőség nyílt.
+        </h5>
+
+        <p>
+          Magyarországon több ezer mérnök hiányzik a munkaerőpiacról.
+          Debrecenben csak az elmúlt 4 évben hatezer új munkahelyet jelentettek
+          be. A szakemberek szerint most már nem munkanélküliségről hanem
+          munkaerőhiányról kell beszélni.
+        </p>
+        <img
+          src="segedanyagok/ber.jpg"
+          style="width: 100%; border-radius: 7px"
+        />
+        <p>
+          Ilyenkor felértékelődik a cégek munkaerő megtartó képessége, ami
+          nemcsak abból áll, hogy a munkaadók bért emelnek, hanem oda kell
+          figyelni a dolgozók megbecsülésére is. Ebben pedig fontos szerepe van
+          a vállalatvezetők érzékenyítésének. - A dolgozói elkötelezettség a
+          vezetők értékteremtő képessége és azok kommunikációja nélkül nem
+          működik. A HR-es a vezető nélkül ő is félkarú óriás, ez csapatmunka,
+          csapatjáték – hangsúlyozta Hegedűs Henrik, a Humán Szakemberek
+          Országos Szövetségének főtitkára. <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Jelentős támogatást nyert a Nádudvari Élelmiszer Kft.
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Gazdaság - A Nádudvari Élelmiszer Kft. nagy hangsúlyt fektet a
+          minőségre, a folyamatos fejlesztésekre, a tej-, a hús- és a mirelit
+          termékek esetében egyaránt.
+        </h5>
+
+        <p>
+          Nagyvállalati beruházási támogatások előirányzatból finanszírozott
+          "Nagyvállalati Beruházási Támogatási Program" keretében, a
+          nagyvállalatok iparfejlesztési beruházásainak ösztönzése kategóriában
+          nyert támogatást a Nádudvari Élelmiszer Kft.
+        </p>
+        <p>
+          A beruházási projekt címe: A Nádudvari Élelmiszer Kft. tejüzemének
+          technológiai innovációja, a túrógyártó vonal és a kutteres üzemrész
+          kapacitásbővítése, valamint a mirelit üzem panír és csomagoló
+          vonalának fejlesztése, bővítése.
+        </p>
+        <p>
+          A Nádudvari Élelmiszer Kft. a Hortobágyi Nemzeti Park közelében
+          található, száz százalékban magyar tulajdonú vállalat, mely a
+          Nagisz-Hage cégcsoport, a régió meghatározó mezőgazdasági
+          integrációjának a tagja. A Nádudvari Élelmiszer Kft. termékpalettáján
+          tejtermékek, húskészítmények és mirelit termékek szerepelnek.<i
+            >(Forrás:dehir.hu)</i
+          >
+        </p>
+      </div>
+    </div>
+
+    <div id="Tech" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Több új technológiával készül a Samsung
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Tech - Ezek között új chipek, játékosoknak szánt telefon, illetve
+          kijelzőbe épített komponensek is lesznek.
+        </h5>
+
+        <p>
+          Az elmúlt napokban egyszerre több hír is befutott a dél-koreai gyártó
+          várható újításaival kapcsolatban, ezeken futunk most végig, hogy
+          lássuk, mire is számíthatunk jövőre a cég háza táján. Érthető módon a
+          Galaxy S10 van a fókuszban, emellett azonban további példányok is
+          megjelenhetnek a piacon, amelyek már egy eddig többnyire mellőzött
+          szegmenst is célba vehetnek.
+        </p>
+        <p>
+          Elsőként egy szabadalmi kérelem benyújtása került nyilvánosságra,
+          amely azonban még tavaly áprilisról ered. Ebben az ujjlenyomat-olvasó
+          kijelzőbe való beépítéséről tesznek említést, amelynek alapján arra
+          számíthatunk, hogy a Galaxy S10 már valóban ezzel a megoldással bukkan
+          majd fel. Az optikai komponens mellett azonban az előlapi kamera is
+          bekerülhet a kijelző alá, legalábbis a most megjelent külsős
+          információk szerint. Egyelőre a korai prototípusokat tesztelik, a
+          technológia pedig 2020-ban készülhet el, vagyis ez valószínűleg inkább
+          az S11 egyik fontos újítása lesz majd. <i>(Forrás:sg.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Két évnyi biztonsági frissítést ír elő a Google
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Tech - Írott szerződésbe foglalja a Google az androidos biztonsági
+          frissítéseket - tudta meg a The Verge. A lécet is lejjebb engedi a
+          vállalat, jó időzítéssel akár évi négy biztonsági javítás is elegendő
+          lehet.
+        </h5>
+
+        <img
+          src="segedanyagok/google.jpg"
+          style="
+            float: left;
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+        <p>
+          Új szerződéssel kényszerítené a biztonsági frissítések kiadására a
+          gyártókat a Google. Az Androidot fejlesztő vállalat hosszú ideje
+          szenved azzal, hogy hiába ad ki havi biztonsági javításokat az
+          operációs rendszerhez, a javításokat a frissítéseket felügyelő
+          telefongyártók egyszerűen nem juttatják el a végfelhasználókhoz.
+          Emiatt rengeteg olyan sebezhető telefon (és tablet) van globálisan
+          használatban, amelyekhez már régen elérhető lenne a javítás.
+        </p>
+        <p>
+          A The Verge most egy új szerződésmintát szerzett meg, amely már
+          előírja a Google gyártópartnereinek a biztonsági javítások rendszeres
+          kiadását, az egyes készülékek megjelenésétől számított minimum két
+          évig. A frissítés rendszerességét meglehetősen nyakatekert módon írja
+          elő a szöveg: eszerint minden hónap végére javítani kell a 90 napnál
+          régebbi hibákat. A gyakorlatban ez azt jelenti, hogy legalább
+          háromhavonta teljes javítócsomagot kell kiadni, feltéve, hogy az
+          teljesen naprakészre hozza a szoftvert. Ha egy hónapos csúszás van a
+          javításban (ami a lassú gyártói és szolgáltatói jóváhagyási folyamatot
+          nézve eléggé reális), akkor az ablak 2 hónapra zsugorodik, és a
+          feltétel csak évi hat frissítéssel teljesíthető.
+          <i>(Forrás:hwsw.hu)</i>
+        </p>
+      </div>
+    </div>
+
+    <div id="Bulvár" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Hajdu Steve a saját maga rajongója
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Bulvár - Óriási siker volt tavaly az Álomutazó című mesemusical, amit
+          idén karácsony környékén újra színpadra állítanak az ismert
+          sztárokkal, a monumentális díszletekkel és természetesen az azóta
+          slágerekké vált dalokkal. Hajdu Steve azonban ezen változtatna.
+        </h5>
+
+        <img
+          src="segedanyagok/steve.jpg"
+          alt="steve"
+          style="
+            float: right;
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+        <p>
+          Az Álomutazó rendezője, Juronics Tamás szerint a mai napig kihat a
+          darab sikere, példaként említette, hogy horvátországi nyaralásuk során
+          a szomszéd apartmanban lakó gyerekek folyamatosan a dalokat énekelték,
+          de egy salgótarjáni étterem szomszéd asztaltársasága is a darabról
+          sztorizgatott. Hajdu Steve gyakorta megnézi a legnagyobb
+          videómegosztón saját dalát, elmondása szerint, hogy növelje a
+          megtekintések számát. <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Megható képekkel ünnepelnek a Barátok közt sztárjai
+        </h3>
+
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Bulvár - Húsz évvel ezelőtt, 1998. október 26-án került televízióba a
+          Barátok közt első része.
+        </h5>
+        <hr />
+        <p>
+          A jeles alkalmat a népszerű sorozat színészgárdája sem hagyhatta szó
+          nélkül: több jelenlegi, és korábbi szereplő megformálója posztolt
+          megható képes üzenetet Instagramra.<i>(Forrás:dehir.hu)</i>
+        </p>
+        <img
+          src="segedanyagok/bk1.jpg"
+          alt="zsuzsi"
+          style="width: 100%; border-radius: 7px"
+        />
+        <img
+          src="segedanyagok/bk2.jpg"
+          alt="zsuzsi"
+          style="width: 100%; border-radius: 7px"
+        />
+      </div>
+    </div>
+
+    <div id="Kultúra" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Igazi sikerdarab ősbemutatójára készül a Csokonai Színház
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Kultúra - A Deszka fesztiválon aratott sikert látva döntött úgy a
+          színház, hogy felveszi repertoárjába a Mintapinty című darabot.
+        </h5>
+
+        <p>
+          Kovács Dominik és Kovács Viktor Mintapinty című drámáját október 26-án
+          mutatja be a Csokonai Színház. Az előadás különlegessége, hogy nem
+          csupán ősbemutatója a darabnak, de a szerzők is újak a pályán.
+        </p>
+        <p>
+          A fiatal szerzőpáros, Kovács Dominik és Kovács Viktor eddig három
+          drámával jelentkezett, a Mintapinty a tavalyi DESZKA fesztiválon
+          keltette fel a Csokonai Színház érdeklődését. A felolvasószínházi
+          siker után döntött úgy a teátrum, hogy felveszi 2018/19-es
+          repertoárjába a darabot.
+        </p>
+        <img
+          src="segedanyagok/kult1.jpg"
+          alt="zsuzsi"
+          style="width: 100%; border-radius: 7px"
+        />
+        <p>
+          A Mintapintyből később a POSZT-on készült egy újabb felolvasószínházi
+          változat, akkor már Lőkös Ildikó dramaturg és Szabó K. István rendező
+          közreműködésével.
+        </p>
+        <p>
+          A darab főhőséből, az 1940-ben született Molnár Zsókából sok minden
+          lehetett volna: háborús áldozat, kispolgári származása miatt
+          osztályidegennek ítélt értelmiségi, flitteres ruhában éneklő
+          operettsztár, amerikai nagynéni – de egyik sem lett. Az égetthalmi
+          falumúzeum igazgatójaként nyugdíjazták 2003-ban. Azóta pintyeivel
+          beszélget, és keresi a lehetőséget, hogy drámai hős lehessen.
+          <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Újra megnézhetnek két sikerdarabot a debreceni nézők
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Kultúra – A Macskajáték és George Sand is visszatér: az egyiket a
+          Csokonaiban láthatjuk, a másik darabot a stúdióban.
+        </h5>
+
+        <p>
+          Adélaïde Pralon, a fiatal francia drámaíró, rendező és műfordító
+          tavaly harmadszor rendezett Debrecenben. A stúdiószínházban a 19.
+          századi írónő, George Sand életét és művészetét idézte meg egy zenés
+          fantáziajáték keretében két remek színésznővel, Varga Klárival és
+          Szakács Hajnalkával. Azóta ugyan Szakács Hajnalka „eligazolt” Csokonai
+          Színházból, ám szívesen tér vissza a Ha álom az élet című előadás
+          kedvéért, mely az idei szezonban is műsoron maradt.
+        </p>
+        <p>
+          A George Sand szövegeinek felhasználásával készült előadást
+          legközelebb október 29-én láthatják a Horváth Árpád Stúdiószínház
+          nézői. A méltán népszerű író, Örkény István 1963-as kisregénye alapján
+          készült Macskajátékot szintén a tavalyi évadban mutatta be a Csokonai
+          Színház társulata. <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+    </div>
+
+    <div id="Sport" class="tabcontent">
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Nem régen épült fel, újra súlyos sérülést szenvedett a Loki támadója
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Sport - Ismét súlyos sérülést szenvedett a DVSC egyik edzésen Bereczki
+          Dániel. Megint hosszú kihagyás vár rá.
+        </h5>
+        <img
+          src="segedanyagok/sport1.jpg"
+          alt="sport1"
+          style="
+            float: left;
+            width: 250px;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 7px;
+            margin-right: 10px;
+            border-radius: 7px;
+          "
+        />
+        <p>
+          A vizsgálatok során kiderült, hogy a 23 éves játékos bal térdében
+          elszakadt a keresztszalag, így műtét és újabb hosszadalmas
+          rehabilitáció vár rá. Mint ismert, a fiatal támadó korábban már
+          szenvedett ilyen sérülést, akkor a jobb lábában.
+        </p>
+        <p>
+          Ami a Loki többi sérültjét illeti, Haris Tabakovic és Mészáros Norbert
+          a rehabilitációját végzi. Ezequiel Calvente bal combközelítője
+          részleges elszakadt, emiatt egy ideig rá sem számíthat a szakmai stáb.
+          Ioan Filip a héten még különmunkát végez, utána azonban csatlakozik a
+          csapathoz. <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3
+          style="
+            text-align: justify;
+            border-left: 4px solid #8cc64e;
+            padding-left: 4%;
+          "
+        >
+          Duplázás: a Magyar Kupában sem jelentett akadályt az Eger a Loki
+          kéziseinek
+        </h3>
+        <hr />
+        <p style="color: gray">Szerző: Dehir.hu | Közzétéve: 2018.10.25.</p>
+        <hr />
+        <h5 style="text-align: justify">
+          Sport - Jobban játszott a Loki az NB I újonca ellen, mint pénteken
+          este. Nagyobb is lett a különbség a Magyar Kupa mérkőzésen.
+        </h5>
+        <p>
+          A bajnoki meccs után ezúttal a Magyar Kupában találkoztak a csapatok.
+          Ezúttal az egriek voltak a házigazdák, s a Magyar Kupa 4. fordulójába
+          jutás volt a tét, több mint hetven Loki-szurkoló utazott el a meccsre.
+          Az egriek pedig roppant sportszerűen a kötelezően előírtnál több
+          jegyet biztosítottak a debrecenieknek.
+        </p>
+        <p>
+          A Loki meg is hálálta a támogatást, hiszen sokkal jobban játszott,
+          mint pénteken, a meccs így aztán már az első félidőben eldőlt. A
+          folytatásban mindenki lehetőséghez jutott és hozzá is tudott tenni
+          játékhoz. A debreceni drukkerek pedig a roppant lelkes hazaiakat is
+          megtapsolták. <i>(Forrás:dehir.hu)</i>
+        </p>
+      </div>
+    </div>
+
+    <div class="jobboldal">
+      <div class="cardj">
+        <h3 style="text-align: center">Hírek itthonról</h3>
+        <hr />
+        <ul style="list-style-type: none">
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="http://videoklinika.hu/bodnar_kell_a_hus#2018-10-28"
+              target="_blank"
+              >Tévhit lenne, hogy a vegetáriánus étrend egészségesebb?</a
+            >
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://www.szeretlekmagyarorszag.hu/babos-timea-megvedte-vilagbajnoki-cimet"
+              target="_blank"
+              >Babos Tímea megvédte világbajnoki címét
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://tv2.hu/sztarban_sztar/273566_sari-evi-szexi-latin-szivtiprokent-keszul-kilepni-a-komfortzonajabol.html?&hirkereso"
+              target="_blank"
+              >Sári Évi szexi latin szívtipróként készül kilépni a
+              komfortzónájából
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://tv2.hu/sztarban_sztar/273567_hien-alig-varja-mar-hogy-oruletes-rap-bulit-csapjon-a-szinpadon.html?&hirkereso"
+              target="_blank"
+              >Hien alig várja már, hogy őrületes rap-bulit csapjon a színpadon
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://tv2.hu/sztarban_sztar/273568_kallay-saunders-andras-nem-uszta-meg-szexi-csajkent-twerkel-majd-a-szinpadon.html?&hirkereso"
+              target="_blank"
+              >Kállay-Saunders András nem úszta meg: Szexi csajként twerkel majd
+              a sz...
+            </a>
+          </p>
+        </ul>
+      </div>
+
+      <div class="cardj">
+        <h3 style="text-align: center">Hírek a nagyvilágból</h3>
+        <hr />
+        <ul style="list-style-type: square">
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://pestisracok.hu/migracio-sikertelen-termekbemutatot-tartott-pragaban-macron/"
+              target="_blank"
+              >Sikertelen termékbemutatót tartott Prágában Macron
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="http://www.origo.hu/utazas/20181028-tovabbra-is-sulyos-zavarok-vannak-a-brusszeli-repuloteren-a-csomagkezelok-sztrajkja-miatt.html?utm_source=hirkereso"
+              target="_blank"
+              >Káosz van a brüsszeli repülőtéren
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="https://infostart.hu/sport/2018/10/28/hatalmas-balhe-dardaiek-meccsen-45-ember-serult-meg"
+              target="_blank"
+              >Hatalmas balhé Dárdaiék meccsén - 45 ember sérült meg
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="http://www.atv.hu/kulfold/20181028-kinanak-nem-sikerult-kilonie-egy-maganraketat/hirkereso "
+              target="_blank"
+              >Kínának nem sikerült kilőnie egy magánrakétát
+            </a>
+          </p>
+          <p style="border-left: 4px solid #23527c; padding-left: 4%">
+            <a
+              href="http://www.atv.hu/kulfold/20181028-bbc-leicester-city-tulajdonosa-is-a-helikopteren-volt/hirkereso "
+              target="_blank"
+              >BBC: a Leicester City tulajdonosa is a helikopteren volt
+            </a>
+          </p>
+        </ul>
+      </div>
+
+      <div class="cardj">
+        <h3 style="text-align: center">Hallgató adatai</h3>
+        <hr />
+        <h4 style="text-align: center">Kun Zoltán</h4>
+        <p style="text-align: center">Neptun kód:RR9WJQ</p>
+        <p style="text-align: center">Debreceni Egyetem</p>
+        <p style="text-align: center">mérnök-informatikus, levelező tagozat</p>
+        <p style="text-align: center">
+          <a href="mailto:kunzoltan@outlook.hu" target="_top"
+            ><b>Kapcsolat</b></a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openLink(evt, menuName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      document.getElementById("defaultOpen").click();
+    </script>
+
+    <div class="footer">
+      <h4>
+        <i> Copyright © 2018 Minden jog fenntartva. Készítette: Kun Zoltán</i>
+      </h4>
+    </div>
+  </body>
+</html>
