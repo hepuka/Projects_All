@@ -1,250 +1,246 @@
+:root {
+  --basic_color: #23527c;
+  --card_background: #f5f5f5;
+  --border_color: gray;
+}
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial;
-  padding-top: 3%;
-  max-width: 1000px;
-  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
 }
 
-.focim {
-  font-family: "Lobster", cursive;
-  font-size: 12px;
-  color: #23527c;
-  padding-bottom: 2%;
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 5vh auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/*--------------CÍM---------------*/
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: var(--basic_color);
+}
+
+.title h1 {
+  margin-left: 40px;
+}
+
+.title .icons ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.title .icons ul li {
+  margin-left: 10px;
 }
 
 .fa {
-  padding: 5px;
-  font-size: 30px;
+  font-size: 20px;
   width: 40px;
-  text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  color: var(--basic_color);
 }
 
 .fa:hover {
   opacity: 0.7;
 }
 
-.fa-facebook {
-  background: #3b5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55acee;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
+/*--------------HEADER---------------*/
 
 .header {
-  margin-bottom: 0%;
-  background-image: url("segedanyagok/debrecen2.jpg");
-  min-height: 320px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  border-radius: 7px 7px 0px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.tab {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #23527c;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  border-radius: 0px 0px 7px 7px;
-  box-shadow: 5px 5px 5px grey;
+.header .tab {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .tablinks {
   border: none;
   background-color: transparent;
-  color: white;
-  padding: 15px 35px;
-  display: inline-block;
+  color: var(--basic_color);
+  padding: 30px 30px 10px 30px;
+  font-weight: bold;
   font-size: 15px;
   cursor: pointer;
-  font-family: "Raleway", sans-serif;
-  text-align: center;
+  position: relative;
 }
 
-.tablinks:hover {
-  background: #8cc64e;
-  color: white;
-}
-
-.tablinks.active {
-  background-color: #8cc64e;
-  color: white;
-}
-
-.container {
+.tablinks:hover::after {
+  content: "";
+  display: block;
+  width: 60%;
+  border-bottom: solid 2px var(--basic_color);
   position: absolute;
-  right: 10px;
-  top: 15px;
-  border-radius: 7px;
-  max-width: 220px;
-  padding: 16px;
-  background-color: #f5f5f5;
+  left: 1;
+  padding-bottom: 5px;
 }
 
-form {
-  border: 3px solid #f1f1f1;
+.tablinks.active::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: solid 2px var(--basic_color);
+  position: absolute;
+  left: 1;
+  padding-bottom: 5px;
 }
 
-input[type="text"],
-input[type="password"] {
+/*--------------MAIN---------------*/
+
+.main {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-#belép {
-  background-color: #8cc64e;
-  color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-#belép:hover {
-  opacity: 0.8;
-}
-
-p {
-  text-align: justify;
-  font-size: 14px;
-  font-family: "Raleway", sans-serif;
-}
-
-h3 {
-  font-family: "Raleway", sans-serif;
-  text-align: justify;
-  padding-left: 4%;
-  color: #23527c;
-  border-left: 6px solid #8cc64e;
-}
-
-h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  color: #23527c;
-  text-align: center;
-}
-
-h5 {
-  color: #23527c;
-}
-
-h6 {
-  color: Gray;
-}
-
-h1 {
-  font-family: "Raleway", sans-serif;
-}
-
-ul {
-  padding-left: 0;
-  text-align: left;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-
-.tabcontent {
-  float: left;
+.section {
   width: 60%;
 }
 
 .card {
-  background-color: #f5f5f5;
-  padding: 10px;
-  margin-top: 20px;
-  border: 1px solid gray;
-  border-radius: 7px;
-}
-
-.cardj {
-  background-color: #f5f5f5;
+  background-color: var(--card_background);
   padding: 20px;
-  padding-top: 0px;
   margin-top: 20px;
-  border: 1px solid gray;
+  border: 1px solid var(--border_color);
   border-radius: 7px;
 }
 
-.jobboldal {
+.card h3 {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.card h5 {
+  color: gray;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.card h4 {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.card .imgright {
   float: right;
+  width: 250px;
+  height: 140px;
+  margin-left: 10px;
+  border-radius: 7px;
+}
+
+.card .imgleft {
+  float: left;
+  width: 250px;
+  height: 140px;
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
+.card .imgcenter {
+  width: 80%;
+  border-radius: 7px;
+}
+
+.card .pleft {
+  text-align: justify;
+}
+
+.card .pright {
+  text-align: justify;
+}
+
+/*--------------ASIDE---------------*/
+
+.aside {
   width: 40%;
   padding-left: 15px;
 }
 
-.img {
-  width: 200px;
+.cardj {
+  background-color: var(--card_background);
   padding: 20px;
-  border: 1px solid black;
-  float: right;
-}
-
-.eler {
-  background-color: #d6e9c6;
-  padding: 20px;
-  padding-top: 0px;
   margin-top: 20px;
   border: 1px solid gray;
   border-radius: 7px;
 }
 
-.footer {
-  text-align: center;
-  font-size: 12px;
-  color: black;
-  clear: both;
-  padding-top: 20px;
+.cardj h3 {
+  color: var(--basic_color);
+  margin-bottom: 15px;
 }
 
-@media screen and (max-width: 1024px) {
-  .tablinks,
-  .tabcontent,
-  .jobboldal,
-  .focim {
-    width: 100%;
-    padding: 0;
+.cardj ul {
+  list-style-type: none;
+}
+
+.cardj ul li {
+  margin-bottom: 10px;
+}
+
+.cardj ul li a {
+  text-decoration: none;
+}
+
+.cardj h4,
+p {
+  margin-top: 15px;
+}
+
+#link {
+  text-decoration: none;
+}
+
+/*--------------FOOTER---------------*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  color: var(--basic_color);
+  margin: 60px 0 20px 0;
+}
+
+@media screen and (max-width: 850px) {
+  .tab,
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title h1 {
+    margin-bottom: 20px;
   }
 }
