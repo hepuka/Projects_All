@@ -39,10 +39,7 @@ body {
 
 .top {
   height: 40vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(../img/background.jpg);
-  background-size: cover;
-  background-position: center;
+  background-color: bisque;
   position: relative;
 }
 
@@ -52,18 +49,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: black;
 }
 
 .koltsegvetes__cim {
   font-size: 18px;
   text-align: center;
   margin-bottom: 10px;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .koltsegvetes__ertek {
-  font-weight: 300;
+  font-weight: bold;
   font-size: 46px;
   text-align: center;
   margin-bottom: 25px;
@@ -78,18 +75,21 @@ body {
 
 .koltsegvetes__bevetelek {
   margin-bottom: 10px;
-  background-color: #28b9b5;
+  background-color: #054240;
+  border-radius: 10px;
 }
 
 .koltsegvetes__kiadasok {
   background-color: #ff5049;
+  border-radius: 10px;
+  color: #e7e7e7;
 }
 
 .koltsegvetes__bevetelek--szoveg,
 .koltsegvetes__kiadasok--szoveg {
   float: left;
   font-size: 13px;
-  color: #444;
+  color: #e7e7e7;
   margin-top: 2px;
 }
 
@@ -97,6 +97,7 @@ body {
 .koltsegvetes__kiadasok--ertek {
   letter-spacing: 1px;
   float: left;
+  color: #e7e7e7;
 }
 
 .koltsegvetes__bevetelek--szazalek,
@@ -122,7 +123,6 @@ body {
 .hozzaad {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
-  background-color: #f7f7f7;
 }
 
 .hozzaad__kontener {
