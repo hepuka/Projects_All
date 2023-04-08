@@ -18,109 +18,125 @@
     <title>Költségvetés - JavaScript Projekt</title>
   </head>
   <body>
-    <div class="top">
-      <div class="koltsegvetes">
-        <div class="koltsegvetes__cim">
-          <span class="koltsegvetes__cim--honap">%Honap%</span>
-        </div>
-
-        <div class="koltsegvetes__ertek">0</div>
-
-        <div class="koltsegvetes__bevetelek clearfix">
-          <div class="koltsegvetes__bevetelek--szoveg">Bevételek</div>
-          <div class="right">
-            <div class="koltsegvetes__bevetelek--ertek">0</div>
-            <div class="koltsegvetes__bevetelek--szazalek">&nbsp;</div>
+    <div class="container">
+      <div class="top">
+        <div class="koltsegvetes">
+          <div class="koltsegvetes__cim">
+            <span class="koltsegvetes__cim--honap">%Honap%</span>
           </div>
-        </div>
+          <div class="koltsegvetes__ertek">0</div>
 
-        <div class="koltsegvetes__kiadasok clearfix">
-          <div class="koltsegvetes__kiadasok--szoveg">Kiadások</div>
-          <div class="right clearfix">
-            <div class="koltsegvetes__kiadasok--ertek">0</div>
-            <div class="koltsegvetes__kiadasok--szazalek">0%</div>
+          <div class="koltsegvetes__bevetelek">
+            <div class="koltsegvetes__bevetelek--szoveg">Bevételek</div>
+            <div>
+              <div class="koltsegvetes__bevetelek--ertek">0</div>
+              <div class="koltsegvetes__bevetelek--szazalek">&nbsp;</div>
+            </div>
+          </div>
+
+          <div class="koltsegvetes__kiadasok">
+            <div class="koltsegvetes__kiadasok--szoveg">Kiadások</div>
+            <div>
+              <div class="koltsegvetes__kiadasok--ertek">0</div>
+              <div class="koltsegvetes__kiadasok--szazalek">0%</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="bottom">
-      <div class="hozzaad">
-        <div class="hozzaad__kontener">
+      <div class="bottom">
+        <div class="hozzaad">
+        
           <select class="hozzaad__tipus">
-            <option value="bev" selected>+</option>
-            <option value="kia">-</option>
+            <option value="bev" selected>bevétel</option>
+            <option value="kia">kiadás</option>
           </select>
           <input
             type="text"
             class="hozzaad__leiras"
-            placeholder="Leírás hozzáadása"
+            placeholder="Leírás"
           />
-          <input type="number" class="hozzaad__ertek" placeholder="Érték" />
+          <input type="number" class="hozzaad__ertek" placeholder="Összeg" />
           <button class="hozzaad__gomb">
-            <i class="ion-ios-checkmark-outline"></i>
+           HOZZÁAD
           </button>
-        </div>
-      </div>
+          </div>
 
-      <div class="kontener clearfix">
-        <div class="bevetelek">
-          <h2 class="bevetelek__cim">Bevételek</h2>
+        <div class="kontener">
 
-          <div class="bevetelek__lista">
-            <!--
-                        <div class="tetel clearfix" id="bevetelek-0">
-                            <div class="tetel__leiras">Fizetés</div>
-                            <div class="right clearfix">
-                                <div class="tetel__ertek">+ 2,100.00</div>
-                                <div class="tetel__torol">
-                                    <button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tetel clearfix" id="bevetelek-1">
-                            <div class="tetel__leiras">Autó eladás</div>
-                            <div class="right clearfix">
-                                <div class="tetel__ertek">+ 1,500.00</div>
-                                <div class="tetel__torol">
-                                    <button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        -->
+          <div class="bevetelek">
+
+            <h2 class="bevetelek__cim">Bevételek</h2>
+            <div class="bevetelek__lista">
+              
+              <!-- <div class="tetel" id="bevetelek-0">
+                <div class="tetel__leiras">Fizetés</div>
+                <div class="right">
+                  <div class="tetel__ertek">+ 2,100.00</div>
+                  <div class="tetel__torol">
+                    <button class="tetel__torol--gomb">
+                      <i class="ion-ios-close-outline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tetel" id="bevetelek-1">
+                <div class="tetel__leiras">Autó eladás</div>
+                <div class="right"> 
+                  <div class="tetel__ertek">+ 1,500.00</div>
+                  <div class="tetel__torol">
+                    <button class="tetel__torol--gomb">
+                      <i class="ion-ios-close-outline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+
+          </div>
+
+
+
+          <div class="kiadasok">
+            <h2 class="kiadasok__cim">Kiadások</h2>
+
+            <div class="kiadasok__lista">
+
+
+              <!-- <div class="tetel" id="kiadas-0">
+                <div class="tetel__leiras">Lakás bérleti díj</div>
+                <div class="right">
+                  <div class="tetel__ertek">- 900.00</div>
+                  <div class="tetel__szazalek">21%</div>
+                  <div class="tetel__torol">
+                    <button class="tetel__torol--gomb">
+                      <i class="ion-ios-close-outline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tetel" id="expense-1">
+                <div class="tetel__leiras">Bevásárlás</div>
+                <div class="right">
+                  <div class="tetel__ertek">- 435.28</div>
+                  <div class="tetel__szazalek">10%</div>
+                  <div class="tetel__torol">
+                    <button class="tetel__torol--gomb">
+                      <i class="ion-ios-close-outline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
           </div>
         </div>
 
-        <div class="kiadasok">
-          <h2 class="kiadasok__cim">Kiadások</h2>
 
-          <div class="kiadasok__lista">
-            <!--
-                        <div class="tetel clearfix" id="kiadas-0">
-                            <div class="tetel__leiras">Lakás bérleti díj</div>
-                            <div class="right clearfix">
-                                <div class="tetel__ertek">- 900.00</div>
-                                <div class="tetel__szazalek">21%</div>
-                                <div class="tetel__torol">
-                                    <button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tetel clearfix" id="expense-1">
-                            <div class="tetel__leiras">Bevásárlás</div>
-                            <div class="right clearfix">
-                                <div class="tetel__ertek">- 435.28</div>
-                                <div class="tetel__szazalek">10%</div>
-                                <div class="tetel__torol">
-                                    <button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-          </div>
         </div>
+
+
       </div>
     </div>
 

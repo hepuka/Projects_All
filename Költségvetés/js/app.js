@@ -7,30 +7,34 @@ let koltsegvetesVezerlo = (function () {
   //kívülről nem lehet hozzáférni
 
   //függvénykonstruktor az objektumpédányok létrehozására
-  let kiadas = function (id, leiras, ertek) {
-    this.id = id;
-    this.leiras = leiras;
-    this.ertek = ertek;
-    this.szazalek = -1;
-  };
-
-  kiadas.prototype.szazalekSzamitas = function (osszBevetel) {
-    if (osszBevetel > 0) {
-      this.szazalek = Math.round((this.ertek / osszBevetel) * 100);
-    } else {
+  class kiadas {
+    constructor(id, leiras, ertek) {
+      this.id = id;
+      this.leiras = leiras;
+      this.ertek = ertek;
       this.szazalek = -1;
     }
-  };
 
-  kiadas.prototype.getSzazalek = function () {
-    return this.szazalek;
-  };
+    szazalekSzamitas(osszBevetel) {
+      if (osszBevetel > 0) {
+        this.szazalek = Math.round((this.ertek / osszBevetel) * 100);
+      } else {
+        this.szazalek = -1;
+      }
+    }
 
-  let bevetel = function (id, leiras, ertek) {
-    this.id = id;
-    this.leiras = leiras;
-    this.ertek = ertek;
-  };
+    getSzazalek() {
+      return this.szazalek;
+    }
+  }
+
+  class bevetel {
+    constructor(id, leiras, ertek) {
+      this.id = id;
+      this.leiras = leiras;
+      this.ertek = ertek;
+    }
+  }
 
   let vegosszegSzamolas = function (tipus) {
     let osszeg = 0;
@@ -96,6 +100,12 @@ let koltsegvetesVezerlo = (function () {
 
       //új tétel hozzáadása az adatszerekezethez
       adatok.tetelek[tipus].push(ujTetel);
+
+      if (tipus === "bev") {
+        localStorage.setItem("bev", JSON.stringify(adatok.tetelek[tipus]));
+      } else if (tipus === "kia") {
+        localStorage.setItem("kia", JSON.stringify(adatok.tetelek[tipus]));
+      }
 
       //új tétel visszaadása
       return ujTetel;
@@ -189,7 +199,7 @@ let feluletVezerlo = (function () {
 
     szam = szam.toLocaleString();
 
-    tipus === "kia" ? (elojel = "-") : (elojel = "+");
+    tipus === "kia" ? (elojel = "-") : (elojel = "");
 
     szam = elojel + " " + szam;
 
@@ -206,6 +216,7 @@ let feluletVezerlo = (function () {
   return {
     getInput: function () {
       //egy objektumot adunk vissza ami tartalmazza a 3 értéket, kiolvassa a megadott 3 értéket
+
       return {
         tipus: document.querySelector(DOMelemek.inputTipus).value,
         leiras: document.querySelector(DOMelemek.inputLeiras).value,
@@ -243,26 +254,24 @@ let feluletVezerlo = (function () {
       //HTML megjelenítése, hozzáadása a DOM-hoz
       //https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
       //insertAdjacentHTML(position, text);
-      /*
-      position
-        A string representing the position relative to the element. Must be one of the following strings:
 
-        "beforebegin"
-        Before the element. Only valid if the element is in the DOM tree and has a parent element.
+      // position
+      //   A string representing the position relative to the element. Must be one of the following strings:
 
-        "afterbegin"
-        Just inside the element, before its first child.
+      //   "beforebegin"
+      //   Before the element. Only valid if the element is in the DOM tree and has a parent element.
 
-        "beforeend"
-        Just inside the element, after its last child.
+      //   "afterbegin"
+      //   Just inside the element, before its first child.
 
-        "afterend"
-        After the element. Only valid if the element is in the DOM tree and has a parent element.
+      //   "beforeend"
+      //   Just inside the element, after its last child.
 
-        text
-        The string to be parsed as HTML or XML and inserted into the tree.
-      
-      */
+      //   "afterend"
+      //   After the element. Only valid if the element is in the DOM tree and has a parent element.
+
+      //   text
+      //   The string to be parsed as HTML or XML and inserted into the tree.
 
       document.querySelector(elem).insertAdjacentHTML("beforeend", ujHTML);
     },
@@ -424,6 +433,8 @@ let vezerlo = (function (koltsegvetesVez, feluletVez) {
 
     //1. bevitt adatok megszerzése a felületről
     input = feluletVezerlo.getInput();
+
+    console.log(input);
 
     if (input.leiras !== "" && !isNaN(input.ertek) && input.ertek > 0) {
       //2. az adatok átadása a költségvetésvezérlő modulnak
