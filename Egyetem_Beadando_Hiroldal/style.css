@@ -76,6 +76,7 @@ img {
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .tablinks {
@@ -143,6 +144,10 @@ img {
 .card h4 {
   text-align: justify;
   margin-bottom: 10px;
+}
+
+.card p {
+  text-align: justify;
 }
 
 .card .imgright {
@@ -220,20 +225,23 @@ p {
   width: 100%;
   text-align: center;
   color: var(--basic_color);
-  margin: 60px 0 20px 0;
+  margin: 60px auto;
 }
 
 @media screen and (max-width: 768px) {
-  .tab,
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .section {
+    width: 100%;
+  }
+
   .aside {
     margin-top: 40px;
-    width: 60%;
+    width: 100%;
     padding: 0;
   }
 }
