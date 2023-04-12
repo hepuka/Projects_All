@@ -70,6 +70,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 30px;
 }
 
 .header img {
@@ -81,6 +82,7 @@ img {
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 30px auto;
 }
 
 .tablinks {
