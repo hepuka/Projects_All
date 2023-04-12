@@ -10,7 +10,7 @@ calculateButton.addEventListener("click", calculateAge);
 
 function calculateAge() {
   // Get the value from the input
-  const birthday = birthdayInput.value;
+  let birthday = birthdayInput.value;
 
   // Check if the value is empty
   if (birthday === "") {
@@ -36,7 +36,7 @@ function getAge(birthDay) {
   const birthdayDate = new Date(birthDay);
 
   // Calculate the age
-  const age = currentDate.getFullYear() - birthdayDate.getFullYear();
+  let age = currentDate.getFullYear() - birthdayDate.getFullYear();
 
   const month = currentDate.getMonth() - birthdayDate.getMonth();
   if (
