@@ -11,6 +11,7 @@ btnEl.addEventListener("click", async function () {
     animeImgEl.src = "spinner.svg";
     const response = await fetch("https://api.catboys.com/img");
     const data = await response.json();
+    console.log(data);
     btnEl.disabled = false;
     btnEl.innerText = "Get Anime";
     animeContainerEl.style.display = "block";

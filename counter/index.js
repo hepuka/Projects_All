@@ -7,13 +7,13 @@ btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const styles = e.currentTarget.classList;
     if (styles.contains("decrease")) {
-      num--;
+      value.innerText = num--;
     } else if (styles.contains("increase")) {
-      num++;
+      value.innerText = num++;
     } else {
-      num = 0;
+      value.innerText = num = 0;
     }
-    value.textContent = num;
+
     if (num > 0) {
       value.style.color = "green";
     } else if (num < 0) {
