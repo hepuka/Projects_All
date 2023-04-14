@@ -15,7 +15,8 @@ body {
 }
 
 img {
-  width: 100%;
+  width: 330px;
+  height: 220px;
 }
 
 .container {
@@ -134,6 +135,7 @@ img {
   margin-top: 20px;
   border: 1px solid var(--border_color);
   border-radius: 7px;
+  display: flow-root;
 }
 
 .card h3 {
@@ -160,28 +162,17 @@ img {
   float: right;
   margin-left: 10px;
   border-radius: 7px;
-  margin-bottom: 15px;
-  margin-top: 15px;
 }
 
 .card .imgleft {
   float: left;
   margin-right: 10px;
   border-radius: 7px;
-  margin-bottom: 15px;
 }
 
 .card .imgcenter {
   width: 80%;
   border-radius: 7px;
-}
-
-.card .pleft {
-  text-align: justify;
-}
-
-.card .pright {
-  text-align: justify;
 }
 
 /*--------------ASIDE---------------*/
@@ -232,6 +223,14 @@ p {
   text-align: center;
   color: var(--basic_color);
   margin: 60px auto;
+}
+
+@media screen and (max-width: 1024px) {
+  img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
