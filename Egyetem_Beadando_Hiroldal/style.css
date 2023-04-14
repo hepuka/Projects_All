@@ -14,18 +14,17 @@ body {
   font-size: 12px;
 }
 
-img {
-  width: 330px;
-  height: 220px;
-}
-
 .container {
   max-width: 1200px;
   height: 100vh;
   margin: 5vh auto 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
+}
+
+hr {
+  margin: 15px 80px;
 }
 
 /*--------------CÍM---------------*/
@@ -37,10 +36,6 @@ img {
   align-items: center;
   margin-bottom: 15px;
   color: var(--basic_color);
-}
-
-.title h1 {
-  margin-left: 40px;
 }
 
 .title .icons ul {
@@ -67,15 +62,14 @@ img {
 /*--------------HEADER---------------*/
 
 .header {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 30px;
 }
 
 .header img {
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .header .tab {
@@ -152,6 +146,7 @@ img {
 .card h4 {
   text-align: justify;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .card p {
@@ -162,12 +157,16 @@ img {
   float: right;
   margin-left: 10px;
   border-radius: 7px;
+  width: 330px;
+  height: 220px;
 }
 
 .card .imgleft {
   float: left;
   margin-right: 10px;
   border-radius: 7px;
+  width: 330px;
+  height: 220px;
 }
 
 .card .imgcenter {
@@ -226,7 +225,8 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
-  img {
+  .card .imgright,
+  .card .imgleft {
     height: 100%;
     width: 100%;
     margin-bottom: 10px;
