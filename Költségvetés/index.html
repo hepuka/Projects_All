@@ -15,7 +15,7 @@
       type="text/css"
     />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <title>Költségvetés - JavaScript Projekt</title>
+    <title>Költségvetés</title>
   </head>
   <body>
     <div class="container">
@@ -25,7 +25,6 @@
             <span class="koltsegvetes__cim--honap">%Honap%</span>
           </div>
           <div class="koltsegvetes__ertek">0</div>
-
           <div class="koltsegvetes__bevetelek">
             <div class="koltsegvetes__bevetelek--szoveg">Bevételek</div>
             <div>
@@ -33,7 +32,6 @@
               <div class="koltsegvetes__bevetelek--szazalek">&nbsp;</div>
             </div>
           </div>
-
           <div class="koltsegvetes__kiadasok">
             <div class="koltsegvetes__kiadasok--szoveg">Kiadások</div>
             <div>
@@ -47,16 +45,17 @@
       <div class="bottom">
         <div class="hozzaad">
         
-          <select class="hozzaad__tipus">
+        <select class="hozzaad__tipus">
             <option value="bev" selected>bevétel</option>
             <option value="kia">kiadás</option>
           </select>
+           <input type="number" class="hozzaad__ertek" placeholder="Összeg" /> 
+  
           <input
             type="text"
             class="hozzaad__leiras"
             placeholder="Leírás"
           />
-          <input type="number" class="hozzaad__ertek" placeholder="Összeg" />
           <button class="hozzaad__gomb">
            HOZZÁAD
           </button>

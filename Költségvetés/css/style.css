@@ -12,7 +12,6 @@ body {
   color: #555;
   font-family: Open Sans;
   font-size: 16px;
-  position: relative;
   height: 100vh;
   font-weight: 400;
 }
@@ -45,9 +44,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
+  width: 300px;
   color: black;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .koltsegvetes__cim {
@@ -123,16 +122,14 @@ body {
 .bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
-/***** FORM *****/
 .hozzaad {
-  padding: 14px;
-  border-bottom: 1px solid #e7e7e7;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hozzaad__tipus {
@@ -188,10 +185,10 @@ body {
   outline: none;
 }
 
-/***** LISTÁK *****/
 .kontener {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .bevetelek {
@@ -337,6 +334,12 @@ h2 {
     flex-direction: column;
     gap: 20px;
     width: 100%;
+  }
+
+  .nexto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .bevetelek {
