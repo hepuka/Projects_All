@@ -299,26 +299,13 @@ h2 {
   display: block;
 }
 .tetel:hover .tetel__ertek {
-  transform: translateX(-20px);
+  transform: translateX(-30px);
 }
 .tetel:hover .tetel__szazalek {
-  transform: translateX(-20px);
+  transform: translateX(-30px);
 }
 
-.fizetetlen {
-  background-color: #ffdad9 !important;
-  cursor: pointer;
-  color: var(--red);
-}
-
-.fizetetlen .tetel__szazalek {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-}
-.fizetetlen:hover .tetel__leiras {
-  font-weight: 900;
-}
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .hozzaad {
     display: flex;
     align-items: center;
@@ -341,6 +328,6 @@ h2 {
   .bevetelek,
   .kiadasok {
     width: 100%;
-    padding: 0 35px;
+    padding: 0 3px;
   }
-}
+} */
