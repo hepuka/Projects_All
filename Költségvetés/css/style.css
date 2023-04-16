@@ -283,9 +283,9 @@ h2 {
   border: none;
   cursor: pointer;
   display: inline-block;
-  vertical-align: middle;
+  display: block;
   line-height: 1;
-  display: none;
+  margin-left: 15px;
 }
 
 .tetel__torol--gomb:focus {
@@ -295,17 +295,13 @@ h2 {
   transform: translateY(2px);
 }
 
-.tetel:hover .tetel__torol--gomb {
-  display: block;
-}
 .tetel:hover .tetel__ertek {
-  transform: translateX(-30px);
+  transform: translateX(-10px);
 }
 .tetel:hover .tetel__szazalek {
-  transform: translateX(-30px);
+  transform: translateX(-10px);
 }
-
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   .hozzaad {
     display: flex;
     align-items: center;
@@ -330,4 +326,4 @@ h2 {
     width: 100%;
     padding: 0 3px;
   }
-} */
+}

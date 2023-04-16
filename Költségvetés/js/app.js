@@ -238,11 +238,11 @@ let feluletVezerlo = (function () {
         elem = DOMelemek.bevetelTarolo;
 
         html =
-          '<div class="tetel clearfix" id="bev-%id%"><div class="tetel__leiras">%leiras%</div><div class="right clearfix"><div class="tetel__ertek">%ertek%</div><div class="tetel__torol"><button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+          '<div class="tetel clearfix" id="bev-%id%"><div class="tetel__leiras">%leiras%</div><div class="right clearfix"><div class="tetel__ertek">%ertek% Ft</div><div class="tetel__torol"><button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button></div></div></div>';
       } else if (tipus === "kia") {
         elem = DOMelemek.kiadasTarolo;
         html =
-          '<div class="tetel clearfix" id="kia-%id%"><div class="tetel__leiras">%leiras%</div><div class="right clearfix"><div class="tetel__ertek">%ertek%</div><div class="tetel__szazalek">21%</div><div class="tetel__torol"><button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+          '<div class="tetel clearfix" id="kia-%id%"><div class="tetel__leiras">%leiras%</div><div class="right clearfix"><div class="tetel__ertek">%ertek% Ft</div><div class="tetel__szazalek">21%</div><div class="tetel__torol"><button class="tetel__torol--gomb"><i class="ion-ios-close-outline"></i></button></div></div></div>';
       }
 
       //HTML feltöltése adatokkal, placeholderek helyére az értékek behelyettesítése
@@ -302,12 +302,15 @@ let feluletVezerlo = (function () {
 
       obj.koltsegVetes > 0 ? (tipus = "bev") : "kia";
 
-      document.querySelector(DOMelemek.koltsegvetesCimke).textContent =
-        szamFormazo(obj.koltsegvetes, tipus);
-      document.querySelector(DOMelemek.osszbevetelCimke).textContent =
-        szamFormazo(obj.osszBevetel, "bev");
-      document.querySelector(DOMelemek.osszkiadasCimke).textContent =
-        szamFormazo(obj.osszKiadas, "kia");
+      document.querySelector(
+        DOMelemek.koltsegvetesCimke
+      ).textContent = `${szamFormazo(obj.koltsegvetes, tipus)} Ft`;
+      document.querySelector(
+        DOMelemek.osszbevetelCimke
+      ).textContent = `${szamFormazo(obj.osszBevetel, "bev")} Ft`;
+      document.querySelector(
+        DOMelemek.osszkiadasCimke
+      ).textContent = `${szamFormazo(obj.osszKiadas, "kia")} Ft`;
 
       if (obj.szazalek > 0) {
         document.querySelector(DOMelemek.szazalekCimke).textContent =
