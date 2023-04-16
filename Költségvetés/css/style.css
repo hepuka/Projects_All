@@ -2,6 +2,16 @@
 *** Általános
 **********************************************/
 
+:root {
+  --grayblack: #555;
+  --gray: rgba(255, 255, 255, 0.2);
+  --red: rgb(255, 0, 0);
+  --blackgreen: #054240;
+  --white: #e7e7e7;
+  --bg: #f7f7f7;
+  --lred: #ffdad9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +19,7 @@
 }
 
 body {
-  color: #555;
+  color: var(--grayblack);
   font-family: Open Sans;
   font-size: 16px;
   height: 100vh;
@@ -17,10 +27,10 @@ body {
 }
 
 .red {
-  color: red !important;
+  color: var(--red) !important;
 }
 .red-focus:focus {
-  border: 1px solid red !important;
+  border: 1px solid var(--red) !important;
 }
 
 .container {
@@ -43,10 +53,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
   width: 300px;
-  color: black;
-  margin: 30px auto;
+  color: var(--grayblack);
 }
 
 .koltsegvetes__cim {
@@ -67,42 +78,46 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 12px;
   text-transform: uppercase;
-  width: 100%;
+  width: 80%;
 }
 
 .koltsegvetes__bevetelek {
   margin-bottom: 10px;
-  background-color: #054240;
+  background-color: var(--blackgreen);
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .koltsegvetes__kiadasok {
-  background-color: red;
+  background-color: var(--red);
   border-radius: 10px;
-  color: #e7e7e7;
+  color: var(--white);
+}
+
+.inside {
+  display: flex;
 }
 
 .koltsegvetes__bevetelek--szoveg,
 .koltsegvetes__kiadasok--szoveg {
-  float: left;
   font-size: 13px;
-  color: #e7e7e7;
-  margin-top: 2px;
+  color: var(--white);
 }
 
 .koltsegvetes__bevetelek--ertek,
 .koltsegvetes__kiadasok--ertek {
   letter-spacing: 1px;
-  float: left;
-  color: #e7e7e7;
+  color: var(--white);
 }
 
 .koltsegvetes__bevetelek--szazalek,
 .koltsegvetes__kiadasok--szazalek {
-  float: left;
   width: 34px;
   font-size: 11px;
   padding: 3px 0;
@@ -110,7 +125,7 @@ body {
 }
 
 .koltsegvetes__kiadasok--szazalek {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--gray);
   text-align: center;
   border-radius: 3px;
 }
@@ -121,31 +136,23 @@ body {
 
 .bottom {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hozzaad {
-  margin-bottom: 50px;
+  margin: 40px 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-}
-
-.hozzaad__tipus {
-  border: 1px solid #e7e7e7;
-  height: 44px;
-  font-size: 14px;
-  margin-right: 10px;
-  font-weight: 300;
-  text-align: center;
-  transition: border 0.6s;
-  border-radius: 5px;
+  flex-wrap: wrap;
+  min-width: 400px;
 }
 
 .hozzaad__leiras,
-.hozzaad__ertek {
-  border: 1px solid #e7e7e7;
+.hozzaad__ertek,
+.hozzaad__tipus {
+  border: 1px solid var(--white);
   font-size: 14px;
   padding: 12px 15px;
   margin-right: 10px;
@@ -154,20 +161,23 @@ body {
 }
 
 .hozzaad__leiras {
-  width: 400px;
+  width: 25vw;
 }
 .hozzaad__ertek {
-  width: 100px;
+  width: 160px;
 }
 
 .hozzaad__gomb {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
+  padding: 12px 15px;
   background: none;
-  border: none;
-  color: #054240;
+  border: 1px solid var(--white);
+  color: var(--blackgreen);
   cursor: pointer;
   margin-left: 10px;
+  border-radius: 5px;
+  transition: border 0.6s;
 }
 
 .hozzaad__gomb:active {
@@ -178,7 +188,7 @@ body {
 .hozzaad__leiras:focus,
 .hozzaad__ertek:focus {
   outline: none;
-  border: 1px solid #054240;
+  border: 1px solid var(--blackgreen);
 }
 
 .hozzaad__gomb:focus {
@@ -187,18 +197,15 @@ body {
 
 .kontener {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.bevetelek {
-  min-width: 475px;
-  margin-right: 10px;
-}
-
+.bevetelek,
 .kiadasok {
-  min-width: 475px;
-  margin-left: 10px;
+  min-width: 400px;
 }
 
 h2 {
@@ -210,10 +217,11 @@ h2 {
 }
 
 .bevetelek_cim {
-  color: #054240;
+  color: var(--blackgreen);
 }
+
 .kiadasok__cim {
-  color: red;
+  color: var(--red);
 }
 
 .tetel {
@@ -221,7 +229,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   padding: 13px;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid var(--white);
 }
 
 .right {
@@ -232,10 +240,10 @@ h2 {
 }
 
 .tetel:first-child {
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid var(--white);
 }
 .tetel:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: var(--bg);
 }
 
 .tetel__ertek {
@@ -247,7 +255,7 @@ h2 {
   margin-left: 20px;
   transition: transform 0.3s;
   font-size: 11px;
-  background-color: #ffdad9;
+  background-color: var(--lred);
   padding: 3px;
   border-radius: 3px;
   width: 32px;
@@ -256,13 +264,13 @@ h2 {
 
 .bevetelek .tetel__ertek,
 .bevetelek .tetel__torol--gomb {
-  color: #28b9b5;
+  color: var(--blackgreen);
 }
 
 .kiadasok .tetel__ertek,
 .kiadasok .tetel__szazalek,
 .kiadasok .tetel__torol--gomb {
-  color: #ff5049;
+  color: var(--red);
 }
 
 .tetel__torol {
@@ -300,7 +308,7 @@ h2 {
 .fizetetlen {
   background-color: #ffdad9 !important;
   cursor: pointer;
-  color: #ff5049;
+  color: var(--red);
 }
 
 .fizetetlen .tetel__szazalek {
@@ -310,43 +318,29 @@ h2 {
   font-weight: 900;
 }
 
-@media (max-width: 1000px) {
-  .kontener {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 50px;
-  }
-
-  .kiadasok {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   .hozzaad {
-    padding: 14px;
-    border-bottom: 1px solid #e7e7e7;
-    margin-bottom: 50px;
     display: flex;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
   }
 
-  .nexto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .hozzaad__leiras {
+    width: 60vw;
   }
-
-  .bevetelek {
-    margin-left: 10px;
+  .hozzaad__ertek {
+    width: 60vw;
   }
 
   .hozzaad__gomb {
-    margin: 0 auto;
+    margin-left: -10px;
+  }
+
+  .bevetelek,
+  .kiadasok {
+    width: 100%;
+    padding: 0 35px;
   }
 }

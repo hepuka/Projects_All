@@ -19,7 +19,10 @@
   </head>
   <body>
     <div class="container">
+
       <div class="top">
+
+
         <div class="koltsegvetes">
           <div class="koltsegvetes__cim">
             <span class="koltsegvetes__cim--honap">%Honap%</span>
@@ -27,14 +30,14 @@
           <div class="koltsegvetes__ertek">0</div>
           <div class="koltsegvetes__bevetelek">
             <div class="koltsegvetes__bevetelek--szoveg">Bevételek</div>
-            <div>
+            <div class="inside">
               <div class="koltsegvetes__bevetelek--ertek">0</div>
-              <div class="koltsegvetes__bevetelek--szazalek">&nbsp;</div>
+             
             </div>
           </div>
           <div class="koltsegvetes__kiadasok">
             <div class="koltsegvetes__kiadasok--szoveg">Kiadások</div>
-            <div>
+            <div class="inside">
               <div class="koltsegvetes__kiadasok--ertek">0</div>
               <div class="koltsegvetes__kiadasok--szazalek">0%</div>
             </div>
@@ -43,14 +46,13 @@
       </div>
 
       <div class="bottom">
-        <div class="hozzaad">
-        
-        <select class="hozzaad__tipus">
+
+        <div class="hozzaad">        
+          <select class="hozzaad__tipus">
             <option value="bev" selected>bevétel</option>
             <option value="kia">kiadás</option>
           </select>
-           <input type="number" class="hozzaad__ertek" placeholder="Összeg" /> 
-  
+          <input type="number" class="hozzaad__ertek" placeholder="Összeg" /> 
           <input
             type="text"
             class="hozzaad__leiras"
@@ -59,16 +61,14 @@
           <button class="hozzaad__gomb">
            HOZZÁAD
           </button>
-          </div>
+        </div>
 
         <div class="kontener">
-
           <div class="bevetelek">
-
             <h2 class="bevetelek__cim">Bevételek</h2>
             <div class="bevetelek__lista">
               
-              <!-- <div class="tetel" id="bevetelek-0">
+              <div class="tetel" id="bevetelek-0">
                 <div class="tetel__leiras">Fizetés</div>
                 <div class="right">
                   <div class="tetel__ertek">+ 2,100.00</div>
@@ -89,7 +89,7 @@
                     </button>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
             </div>
 
@@ -103,7 +103,7 @@
             <div class="kiadasok__lista">
 
 
-              <!-- <div class="tetel" id="kiadas-0">
+               <div class="tetel" id="kiadas-0">
                 <div class="tetel__leiras">Lakás bérleti díj</div>
                 <div class="right">
                   <div class="tetel__ertek">- 900.00</div>
@@ -127,7 +127,7 @@
                     </button>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
