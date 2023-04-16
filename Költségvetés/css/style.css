@@ -300,6 +300,7 @@ h2 {
 .tetel:hover .tetel__szazalek {
   transform: translateX(-10px);
 }
+
 @media (max-width: 600px) {
   .hozzaad {
     display: flex;
@@ -324,5 +325,15 @@ h2 {
   .kiadasok {
     width: 100%;
     padding: 0 30px;
+  }
+
+  .tetel__torol--gomb {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    line-height: 1;
+    margin-left: 15px;
   }
 }
