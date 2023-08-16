@@ -17,8 +17,8 @@ async function searchImages() {
   if (page === 1) {
     searchResultsEl.innerHTML = "";
   }
-
   const results = data.results;
+  console.log(results);
 
   results.map((result) => {
     const imageWrapper = document.createElement("div");
@@ -33,6 +33,16 @@ async function searchImages() {
 
     imageWrapper.appendChild(image);
     imageWrapper.appendChild(imageLink);
+
+    const infoWrapper = document.createElement("div");
+    infoWrapper.classList.add("info-section");
+    const download = document.createElement("a");
+    download.href = result.links.download;
+    download.target = "_blank";
+    download.textContent = "Download link";
+    infoWrapper.appendChild(download);
+    imageWrapper.appendChild(infoWrapper);
+
     searchResultsEl.appendChild(imageWrapper);
   });
 
